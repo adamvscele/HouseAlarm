@@ -1,26 +1,61 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="GtN-nJ-ipR">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Main View Controller-->
+        <scene sceneID="9hT-Y2-G1U">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="mainface" id="GtN-nJ-ipR" customClass="HPRMainViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="l8G-kE-oQf"/>
+                        <viewControllerLayoutGuide type="bottom" id="h97-sg-q8j"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="gzF-CY-NrG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sis-9C-CXT">
+                                <rect key="frame" x="0.0" y="28" width="31" height="30"/>
+                                <state key="normal" title="菜单"/>
+                                <connections>
+                                    <action selector="onClickLeftSlide:" destination="GtN-nJ-ipR" eventType="touchUpInside" id="5Qh-vV-8tB"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="标题" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qKc-db-fT8">
+                                <rect key="frame" x="170" y="28" width="35" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a4w-lD-o5j">
+                                <rect key="frame" x="344" y="28" width="31" height="30"/>
+                                <state key="normal" title="功能"/>
+                                <connections>
+                                    <action selector="onClickRightFunc:" destination="GtN-nJ-ipR" eventType="touchUpInside" id="t5s-aU-Os4"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="a4w-lD-o5j" firstAttribute="top" secondItem="l8G-kE-oQf" secondAttribute="bottom" constant="8" id="3rR-Uj-fO0"/>
+                            <constraint firstAttribute="trailing" secondItem="a4w-lD-o5j" secondAttribute="trailing" id="Jjb-Xy-nM1"/>
+                            <constraint firstItem="sis-9C-CXT" firstAttribute="leading" secondItem="gzF-CY-NrG" secondAttribute="leading" id="M1J-U9-0tv"/>
+                            <constraint firstItem="qKc-db-fT8" firstAttribute="top" secondItem="l8G-kE-oQf" secondAttribute="bottom" constant="8" id="Pez-9Z-htH"/>
+                            <constraint firstItem="sis-9C-CXT" firstAttribute="top" secondItem="l8G-kE-oQf" secondAttribute="bottom" constant="8" id="jOy-01-gyd"/>
+                            <constraint firstItem="qKc-db-fT8" firstAttribute="centerX" secondItem="gzF-CY-NrG" secondAttribute="centerX" id="tqU-Qo-bNu"/>
+                        </constraints>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G35-LM-nEb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-130" y="102"/>
         </scene>
     </scenes>
 </document>

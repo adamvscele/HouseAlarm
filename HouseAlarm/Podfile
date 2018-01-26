@@ -9,6 +9,7 @@ target 'HouseAlarm' do
 pod 'MBProgressHUD'
 pod 'AFOnoResponseSerializer'
 pod 'Masonry'
-
+pod 'CWLateralSlide', '~> 1.5.5'
+pod 'TSMessages'
 
 end

@@ -1,5 +1,5 @@
 //
-//  HAConfigMacro.h
+//  HPrConfigMacro.h
 //  HouseAlarm
 //
 //  Created by macos on 2018/1/23.
@@ -9,7 +9,7 @@
 #ifndef HAConfig_h
 #define HAConfig_h
 
-#define REMOTE_HOST      @"192.168.20.209"
+#define REMOTE_HOST      @"192.168.20.195"
 #define REMOTE_PORT      1000
 
 #ifdef DEBUG
@@ -27,4 +27,4 @@
 #endif
 
 
-#endif /* HAConfigMacro_h */
+#endif /* HPRConfigMacro_h */

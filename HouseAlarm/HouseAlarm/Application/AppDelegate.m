@@ -7,9 +7,13 @@
 //
 
 #import "AppDelegate.h"
-#import "SocketClient.h"
+#import <UserNotifications/UserNotifications.h>
 
-@interface AppDelegate ()
+#import "SocketClient.h"
+#import "HPRMainViewController.h"
+
+#define kSystemVersion [[UIDevice currentDevice].systemVersion floatValue]
+@interface AppDelegate ()<UNUserNotificationCenterDelegate>
 
 @end
 
@@ -19,16 +23,49 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-
     
-    //[self test];
+    if (1) {
+        self.window =[[UIWindow alloc]initWithFrame:[[UIScreen mainScreen] bounds] ];
+         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+         HPRMainViewController *vc =[storyboard instantiateInitialViewController];
+         self.window.rootViewController =vc;
+        self.window.backgroundColor =[UIColor whiteColor];
+        [self.window makeKeyAndVisible];
+    }
+    int sysVer =kSystemVersion;
+    if (sysVer >= 10.0) {
+        UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
+        center.delegate = self;
+        UNAuthorizationOptions types=UNAuthorizationOptionBadge|UNAuthorizationOptionAlert|UNAuthorizationOptionSound;
+        [center requestAuthorizationWithOptions:types completionHandler:^(BOOL granted, NSError * _Nullable error) {
+            if (granted) {
+                [center getNotificationSettingsWithCompletionHandler:^(UNNotificationSettings * _Nonnull settings) {
+                    
+                }];
+            } else {
+                [[UIApplication sharedApplication]openURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString] options:@{UIApplicationOpenURLOptionUniversalLinksOnly:@""} completionHandler:^(BOOL success) { }];
+            }
+        }];
+    }else if (sysVer >= 8.0){
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+        [application registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert | UIUserNotificationTypeSound | UIUserNotificationTypeBadge categories:nil]];
+#pragma clang diagnostic pop
+    }
     
-    LogHA(@"*******application launched main thread %@",[NSThread currentThread]);
-    [[SocketClient instance] connect:REMOTE_HOST port:REMOTE_PORT];
     
+   //[self test];
     
+   // LogHA(@"*******application launched main thread %@",[NSThread currentThread]);
+   // [[SocketClient instance] connect:REMOTE_HOST port:REMOTE_PORT];
     
-    
+    //self.window =[[UIWindow alloc]initWithFrame:[[UIScreen mainScreen] bounds] ];
+   // UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+   // HPRMainViewController *vc =[storyboard instantiateViewControllerWithIdentifier:@"mainface"];
+   // self.window.rootViewController =vc;
+   // self.window.backgroundColor =[UIColor whiteColor];
+   // [self.window makeKeyAndVisible];
+//
     return YES;
 }
 

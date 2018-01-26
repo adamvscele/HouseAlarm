@@ -7,8 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2287F9BA201AD34600D6A257 /* HPRConstant.m in Sources */ = {isa = PBXBuildFile; fileRef = 2287F9B9201AD34600D6A257 /* HPRConstant.m */; };
+		2287F9BD201AF07600D6A257 /* HPRMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2287F9BC201AF07600D6A257 /* HPRMainViewController.m */; };
+		2287F9C2201B048500D6A257 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2287F9C1201B048500D6A257 /* Login.storyboard */; };
+		2287F9C7201B519400D6A257 /* SlideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2287F9C5201B519400D6A257 /* SlideViewController.m */; };
+		2287F9C8201B519400D6A257 /* SlideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2287F9C6201B519400D6A257 /* SlideViewController.xib */; };
+		2287F9CC201B584A00D6A257 /* PushNotificationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2287F9CB201B584A00D6A257 /* PushNotificationManager.m */; };
 		22ED7A36201730BB00AFB4C5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 22ED7A35201730BB00AFB4C5 /* main.m */; };
-		22ED7A3C201730BB00AFB4C5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22ED7A3B201730BB00AFB4C5 /* ViewController.m */; };
 		22ED7A3F201730BB00AFB4C5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22ED7A3D201730BB00AFB4C5 /* Main.storyboard */; };
 		22ED7A42201730BB00AFB4C5 /* HouseAlarm.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 22ED7A40201730BB00AFB4C5 /* HouseAlarm.xcdatamodeld */; };
 		22ED7A44201730BB00AFB4C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22ED7A43201730BB00AFB4C5 /* Assets.xcassets */; };
@@ -16,32 +21,40 @@
 		22ED7A5520173A5E00AFB4C5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 22ED7A5420173A5E00AFB4C5 /* AppDelegate.m */; };
 		22ED7A5A20173C7800AFB4C5 /* SocketClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 22ED7A5920173C7800AFB4C5 /* SocketClient.m */; };
 		22ED7A5E20173F5800AFB4C5 /* DIYOutBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 22ED7A5D20173F5800AFB4C5 /* DIYOutBuffer.m */; };
-		22F9414A2019D23200EA955E /* HANotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F941492019D23200EA955E /* HANotification.m */; };
+		22F9414A2019D23200EA955E /* HPRNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F941492019D23200EA955E /* HPRNotification.m */; };
 		DF3B1381D4F3308357FB4343 /* libPods-HouseAlarm.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 15C27B9FC7C1F4FA89F3FA18 /* libPods-HouseAlarm.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		15C27B9FC7C1F4FA89F3FA18 /* libPods-HouseAlarm.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HouseAlarm.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AA5D8FF2E17884CF64BBFB7 /* Pods-HouseAlarm.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HouseAlarm.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HouseAlarm/Pods-HouseAlarm.debug.xcconfig"; sourceTree = "<group>"; };
+		2287F9B8201AD34600D6A257 /* HPRConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPRConstant.h; sourceTree = "<group>"; };
+		2287F9B9201AD34600D6A257 /* HPRConstant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPRConstant.m; sourceTree = "<group>"; };
+		2287F9BB201AF07600D6A257 /* HPRMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HPRMainViewController.h; path = ../HPRMainViewController.h; sourceTree = "<group>"; };
+		2287F9BC201AF07600D6A257 /* HPRMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HPRMainViewController.m; path = ../HPRMainViewController.m; sourceTree = "<group>"; };
+		2287F9C1201B048500D6A257 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		2287F9C4201B519400D6A257 /* SlideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideViewController.h; sourceTree = "<group>"; };
+		2287F9C5201B519400D6A257 /* SlideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideViewController.m; sourceTree = "<group>"; };
+		2287F9C6201B519400D6A257 /* SlideViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SlideViewController.xib; sourceTree = "<group>"; };
+		2287F9CA201B584A00D6A257 /* PushNotificationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushNotificationManager.h; sourceTree = "<group>"; };
+		2287F9CB201B584A00D6A257 /* PushNotificationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushNotificationManager.m; sourceTree = "<group>"; };
 		22ED7A31201730BB00AFB4C5 /* HouseAlarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HouseAlarm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22ED7A35201730BB00AFB4C5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		22ED7A3A201730BB00AFB4C5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		22ED7A3B201730BB00AFB4C5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		22ED7A3E201730BB00AFB4C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		22ED7A41201730BB00AFB4C5 /* HouseAlarm.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HouseAlarm.xcdatamodel; sourceTree = "<group>"; };
 		22ED7A43201730BB00AFB4C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		22ED7A46201730BB00AFB4C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		22ED7A48201730BB00AFB4C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22ED7A4E2017327400AFB4C5 /* HouseAlarm-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HouseAlarm-Prefix.pch"; sourceTree = "<group>"; };
-		22ED7A502017336000AFB4C5 /* HAConfigMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HAConfigMacro.h; sourceTree = "<group>"; };
+		22ED7A502017336000AFB4C5 /* HPRConfigMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HPRConfigMacro.h; sourceTree = "<group>"; };
 		22ED7A5320173A5E00AFB4C5 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		22ED7A5420173A5E00AFB4C5 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		22ED7A5820173C7800AFB4C5 /* SocketClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocketClient.h; sourceTree = "<group>"; };
 		22ED7A5920173C7800AFB4C5 /* SocketClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocketClient.m; sourceTree = "<group>"; };
 		22ED7A5C20173F5800AFB4C5 /* DIYOutBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DIYOutBuffer.h; sourceTree = "<group>"; };
 		22ED7A5D20173F5800AFB4C5 /* DIYOutBuffer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DIYOutBuffer.m; sourceTree = "<group>"; };
-		22F941482019D23200EA955E /* HANotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HANotification.h; sourceTree = "<group>"; };
-		22F941492019D23200EA955E /* HANotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HANotification.m; sourceTree = "<group>"; };
+		22F941482019D23200EA955E /* HPRNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPRNotification.h; sourceTree = "<group>"; };
+		22F941492019D23200EA955E /* HPRNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPRNotification.m; sourceTree = "<group>"; };
 		9D6751C31922CEEDD8389F6E /* Pods-HouseAlarm.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HouseAlarm.release.xcconfig"; path = "Pods/Target Support Files/Pods-HouseAlarm/Pods-HouseAlarm.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -66,6 +79,28 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		2287F9C3201B094600D6A257 /* MainMVC */ = {
+			isa = PBXGroup;
+			children = (
+				22ED7A3D201730BB00AFB4C5 /* Main.storyboard */,
+				2287F9BB201AF07600D6A257 /* HPRMainViewController.h */,
+				2287F9BC201AF07600D6A257 /* HPRMainViewController.m */,
+				2287F9C4201B519400D6A257 /* SlideViewController.h */,
+				2287F9C5201B519400D6A257 /* SlideViewController.m */,
+				2287F9C6201B519400D6A257 /* SlideViewController.xib */,
+			);
+			path = MainMVC;
+			sourceTree = "<group>";
+		};
+		2287F9C9201B584A00D6A257 /* PushNotificationManager */ = {
+			isa = PBXGroup;
+			children = (
+				2287F9CA201B584A00D6A257 /* PushNotificationManager.h */,
+				2287F9CB201B584A00D6A257 /* PushNotificationManager.m */,
+			);
+			path = PushNotificationManager;
+			sourceTree = "<group>";
+		};
 		22ED7A28201730BB00AFB4C5 = {
 			isa = PBXGroup;
 			children = (
@@ -87,18 +122,18 @@
 		22ED7A33201730BB00AFB4C5 /* HouseAlarm */ = {
 			isa = PBXGroup;
 			children = (
+				2287F9C9201B584A00D6A257 /* PushNotificationManager */,
+				2287F9C3201B094600D6A257 /* MainMVC */,
 				22F941462019D1D300EA955E /* Utils */,
 				22ED7A5620173AED00AFB4C5 /* Module */,
 				22ED7A5220173A5E00AFB4C5 /* Application */,
 				22ED7A4F2017332B00AFB4C5 /* Config */,
-				22ED7A3A201730BB00AFB4C5 /* ViewController.h */,
-				22ED7A3B201730BB00AFB4C5 /* ViewController.m */,
-				22ED7A3D201730BB00AFB4C5 /* Main.storyboard */,
 				22ED7A43201730BB00AFB4C5 /* Assets.xcassets */,
 				22ED7A45201730BB00AFB4C5 /* LaunchScreen.storyboard */,
 				22ED7A48201730BB00AFB4C5 /* Info.plist */,
 				22ED7A40201730BB00AFB4C5 /* HouseAlarm.xcdatamodeld */,
 				22ED7A34201730BB00AFB4C5 /* Supporting Files */,
+				2287F9C1201B048500D6A257 /* Login.storyboard */,
 			);
 			path = HouseAlarm;
 			sourceTree = "<group>";
@@ -115,7 +150,9 @@
 		22ED7A4F2017332B00AFB4C5 /* Config */ = {
 			isa = PBXGroup;
 			children = (
-				22ED7A502017336000AFB4C5 /* HAConfigMacro.h */,
+				22ED7A502017336000AFB4C5 /* HPRConfigMacro.h */,
+				2287F9B8201AD34600D6A257 /* HPRConstant.h */,
+				2287F9B9201AD34600D6A257 /* HPRConstant.m */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -167,8 +204,8 @@
 		22F941472019D20600EA955E /* Notification */ = {
 			isa = PBXGroup;
 			children = (
-				22F941482019D23200EA955E /* HANotification.h */,
-				22F941492019D23200EA955E /* HANotification.m */,
+				22F941482019D23200EA955E /* HPRNotification.h */,
+				22F941492019D23200EA955E /* HPRNotification.m */,
 			);
 			path = Notification;
 			sourceTree = "<group>";
@@ -245,6 +282,8 @@
 			files = (
 				22ED7A47201730BB00AFB4C5 /* LaunchScreen.storyboard in Resources */,
 				22ED7A44201730BB00AFB4C5 /* Assets.xcassets in Resources */,
+				2287F9C2201B048500D6A257 /* Login.storyboard in Resources */,
+				2287F9C8201B519400D6A257 /* SlideViewController.xib in Resources */,
 				22ED7A3F201730BB00AFB4C5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -276,9 +315,28 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-HouseAlarm/Pods-HouseAlarm-resources.sh",
+				"${PODS_ROOT}/TSMessages/Pod/Assets/NotificationBackgroundError.png",
+				"${PODS_ROOT}/TSMessages/Pod/Assets/NotificationBackgroundError@2x.png",
+				"${PODS_ROOT}/TSMessages/Pod/Assets/NotificationBackgroundErrorIcon.png",
+				"${PODS_ROOT}/TSMessages/Pod/Assets/NotificationBackgroundErrorIcon@2x.png",
+				"${PODS_ROOT}/TSMessages/Pod/Assets/NotificationBackgroundMessage.png",
+				"${PODS_ROOT}/TSMessages/Pod/Assets/NotificationBackgroundMessage@2x.png",
+				"${PODS_ROOT}/TSMessages/Pod/Assets/NotificationBackgroundSuccess.png",
+				"${PODS_ROOT}/TSMessages/Pod/Assets/NotificationBackgroundSuccess@2x.png",
+				"${PODS_ROOT}/TSMessages/Pod/Assets/NotificationBackgroundSuccessIcon.png",
+				"${PODS_ROOT}/TSMessages/Pod/Assets/NotificationBackgroundSuccessIcon@2x.png",
+				"${PODS_ROOT}/TSMessages/Pod/Assets/NotificationBackgroundWarning.png",
+				"${PODS_ROOT}/TSMessages/Pod/Assets/NotificationBackgroundWarning@2x.png",
+				"${PODS_ROOT}/TSMessages/Pod/Assets/NotificationBackgroundWarningIcon.png",
+				"${PODS_ROOT}/TSMessages/Pod/Assets/NotificationBackgroundWarningIcon@2x.png",
+				"${PODS_ROOT}/TSMessages/Pod/Assets/NotificationButtonBackground.png",
+				"${PODS_ROOT}/TSMessages/Pod/Assets/NotificationButtonBackground@2x.png",
+				"${PODS_ROOT}/TSMessages/Pod/Assets/TSMessagesDefaultDesign.json",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -307,13 +365,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2287F9CC201B584A00D6A257 /* PushNotificationManager.m in Sources */,
+				2287F9BD201AF07600D6A257 /* HPRMainViewController.m in Sources */,
 				22ED7A5520173A5E00AFB4C5 /* AppDelegate.m in Sources */,
 				22ED7A42201730BB00AFB4C5 /* HouseAlarm.xcdatamodeld in Sources */,
 				22ED7A5A20173C7800AFB4C5 /* SocketClient.m in Sources */,
-				22ED7A3C201730BB00AFB4C5 /* ViewController.m in Sources */,
+				2287F9BA201AD34600D6A257 /* HPRConstant.m in Sources */,
 				22ED7A36201730BB00AFB4C5 /* main.m in Sources */,
 				22ED7A5E20173F5800AFB4C5 /* DIYOutBuffer.m in Sources */,
-				22F9414A2019D23200EA955E /* HANotification.m in Sources */,
+				22F9414A2019D23200EA955E /* HPRNotification.m in Sources */,
+				2287F9C7201B519400D6A257 /* SlideViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,6 +387,7 @@
 				22ED7A3E201730BB00AFB4C5 /* Base */,
 			);
 			name = Main.storyboard;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		22ED7A45201730BB00AFB4C5 /* LaunchScreen.storyboard */ = {
