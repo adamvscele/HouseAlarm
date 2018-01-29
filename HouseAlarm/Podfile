@@ -13,5 +13,6 @@ pod 'CWLateralSlide', '~> 1.5.5'
 pod 'TSMessages'
 pod 'MJRefresh'
 pod 'YYKit'
+pod 'MMPlaceHolder'
 
 end

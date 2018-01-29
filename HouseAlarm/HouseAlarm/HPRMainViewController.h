@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 @class SlideViewController;
-@interface HPRMainViewController : UIViewController
+@interface HPRMainViewController : UITableViewController
 
 @property (nonatomic,strong)SlideViewController *slideLeftVC;
 

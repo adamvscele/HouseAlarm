@@ -17,4 +17,6 @@
 
 
 - (void)reloadAllButtonsOfTitleBarWithTitles:(NSArray*)titles;
+
+-(void)scrollToCenterWithIndex:(NSInteger )index;
 @end

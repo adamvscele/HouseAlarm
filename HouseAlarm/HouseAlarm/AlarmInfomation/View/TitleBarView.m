@@ -21,12 +21,12 @@
 @implementation TitleBarView
 
 /*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
-}
-*/
+ // Only override drawRect: if you perform custom drawing.
+ // An empty implementation adversely affects performance during animation.
+ - (void)drawRect:(CGRect)rect {
+ // Drawing code
+ }
+ */
 -(instancetype)initWithFrame:(CGRect)frame andTitles:(NSArray *)titles{
     self =[super initWithFrame:frame];
     if (self) {
@@ -61,21 +61,20 @@
         UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
         btn.backgroundColor =[UIColor clearColor];
         btn.titleLabel.font = [UIFont systemFontOfSize:15];
-        [btn setTitleColor:[UIColor colorWitHex:0x909090] forState:UIControlStateNormal];
+        [btn setTitleColor:[UIColor colorWithHex:0x909090] forState:UIControlStateNormal];
         [btn setTitle:title forState:UIControlStateNormal];
         
         btn.frame = CGRectMake(btnWidth *idx, 0,btnWidth, btnHeight);
         btn.tag = idx;
-        [btn addTarget:self action:@selector(onClick:) forControlEvents:UIControlEventTouchUpOutside];
+        [btn addTarget:self action:@selector(onClick:) forControlEvents:UIControlEventTouchUpInside];
         [_titleButtons addObject:btn];
         [self addSubview:btn];
         [self sendSubviewToBack:btn];
         
     }];
+    //默认选择第一个按钮
     UIButton *firstTitle = _titleButtons[0];
     [firstTitle setTitleColor:[UIColor selectBtnColor] forState:UIControlStateNormal];
-    
-    
 }
 
 -(void)onClick:(UIButton *)button{
@@ -85,14 +84,17 @@
     }
 }
 
+/*
+ **移动并设置按钮颜色
+ */
 -(void)scrollToCenterWithIndex:(NSInteger )index{
     UIButton *preBtn = _titleButtons[_currentIndex];
-    [preBtn setTitleColor:[UIColor colorWitHex:0x909090] forState:(UIControlStateNormal)];
+    [preBtn setTitleColor:[UIColor colorWithHex:0x909090] forState:(UIControlStateNormal)];
     _currentIndex = index;
     
-    UIButton* tmpBtn =_titleButtons[index];
-    [tmpBtn setTitleColor:[UIColor selectBtnColor] forState:UIControlStateNormal];
-    UIButton *btn = [self viewWithTag:index];
+    UIButton* btn =_titleButtons[index];
+    [btn setTitleColor:[UIColor selectBtnColor] forState:UIControlStateNormal];
+    //UIButton *btn = [self viewWithTag:index];
     
     if (self.contentSize.width >self.frame.size.width) {
         //scroll

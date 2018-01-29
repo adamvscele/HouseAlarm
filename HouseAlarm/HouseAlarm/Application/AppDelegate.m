@@ -23,7 +23,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    
+    /*
     if (1) {
         self.window =[[UIWindow alloc]initWithFrame:[[UIScreen mainScreen] bounds] ];
          UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
@@ -31,7 +31,7 @@
          self.window.rootViewController =vc;
         self.window.backgroundColor =[UIColor whiteColor];
         [self.window makeKeyAndVisible];
-    }
+    }*/
     int sysVer =kSystemVersion;
     if (sysVer >= 10.0) {
         UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];

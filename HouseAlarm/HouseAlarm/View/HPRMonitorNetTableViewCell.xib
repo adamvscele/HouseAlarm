@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="116" id="KGk-i7-Jjw" customClass="HPRMonitorNetTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="408" height="116"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="408" height="116"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="用户位置" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lxn-o6-av2">
+                        <rect key="frame" x="24" y="16" width="360" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lKQ-Ml-jF9" userLabel="split_line">
+                        <rect key="frame" x="16" y="114.5" width="392" height="1"/>
+                        <color key="backgroundColor" red="0.4634313766" green="0.43427632269999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="9nK-X7-wxy"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yx8-xP-VEI" userLabel="火警">
+                        <rect key="frame" x="0.0" y="44.5" width="102" height="64"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="NotificationBackgroundSuccessIcon.png" translatesAutoresizingMaskIntoConstraints="NO" id="2cY-8F-oKl" userLabel="fire_ico">
+                                <rect key="frame" x="13" y="25" width="12" height="12"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="火警:1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BNb-5V-zb7">
+                                <rect key="frame" x="33" y="20" width="47" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.21451014833443949" blue="0.31276332817419195" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="64" id="d6i-RC-ZZw"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CYW-s8-6RK" userLabel="屏蔽">
+                        <rect key="frame" x="204" y="44.5" width="102" height="64"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="NotificationBackgroundSuccessIcon.png" translatesAutoresizingMaskIntoConstraints="NO" id="3fv-wh-sO2" userLabel="shield_ico">
+                                <rect key="frame" x="14" y="27.5" width="12" height="12"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="屏蔽:1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TNh-08-oSf">
+                                <rect key="frame" x="36" y="26" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.44368226090000001" green="1" blue="0.35933098610000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pqw-RI-wXf" userLabel="其它">
+                        <rect key="frame" x="306" y="44.5" width="102" height="64"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="NotificationBackgroundSuccessIcon.png" translatesAutoresizingMaskIntoConstraints="NO" id="cdr-fy-ZB7" userLabel="other_ico">
+                                <rect key="frame" x="15" y="25.5" width="12" height="12"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="其他:1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DOK-wF-AL5">
+                                <rect key="frame" x="45" y="23" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.21451014830000001" blue="0.31276332820000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K9a-As-ECb" userLabel="故障">
+                        <rect key="frame" x="102" y="44.5" width="102" height="64"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="NotificationBackgroundSuccessIcon.png" translatesAutoresizingMaskIntoConstraints="NO" id="5ny-Lq-CNe" userLabel="fault_ico">
+                                <rect key="frame" x="17" y="25.5" width="12" height="12"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="故障:1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zmd-nY-NCm">
+                                <rect key="frame" x="30" y="21" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.96964684249999999" green="1" blue="0.37328102279999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="K9a-As-ECb" firstAttribute="leading" secondItem="yx8-xP-VEI" secondAttribute="trailing" id="4yI-su-ZQa"/>
+                    <constraint firstItem="K9a-As-ECb" firstAttribute="centerY" secondItem="yx8-xP-VEI" secondAttribute="centerY" id="4zJ-TW-UKB"/>
+                    <constraint firstItem="lKQ-Ml-jF9" firstAttribute="top" secondItem="yx8-xP-VEI" secondAttribute="bottom" constant="6" id="7QO-mi-hiO"/>
+                    <constraint firstAttribute="trailing" secondItem="lKQ-Ml-jF9" secondAttribute="trailing" id="Bw1-f0-i3A"/>
+                    <constraint firstItem="K9a-As-ECb" firstAttribute="width" secondItem="yx8-xP-VEI" secondAttribute="width" id="EQd-nx-HM3"/>
+                    <constraint firstItem="pqw-RI-wXf" firstAttribute="height" secondItem="yx8-xP-VEI" secondAttribute="height" id="H5x-sZ-59r"/>
+                    <constraint firstAttribute="bottom" secondItem="lKQ-Ml-jF9" secondAttribute="bottom" id="Ktb-8O-xK4"/>
+                    <constraint firstItem="CYW-s8-6RK" firstAttribute="height" secondItem="yx8-xP-VEI" secondAttribute="height" id="MSZ-dz-ehg"/>
+                    <constraint firstItem="yx8-xP-VEI" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="O0i-FO-dep"/>
+                    <constraint firstItem="lKQ-Ml-jF9" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="VAT-l8-dUK"/>
+                    <constraint firstItem="pqw-RI-wXf" firstAttribute="leading" secondItem="CYW-s8-6RK" secondAttribute="trailing" id="VDN-AE-vDy"/>
+                    <constraint firstItem="K9a-As-ECb" firstAttribute="leading" secondItem="yx8-xP-VEI" secondAttribute="trailing" id="Zse-fZ-2wq"/>
+                    <constraint firstItem="CYW-s8-6RK" firstAttribute="centerY" secondItem="yx8-xP-VEI" secondAttribute="centerY" id="a8H-TY-Kh1"/>
+                    <constraint firstItem="CYW-s8-6RK" firstAttribute="width" secondItem="yx8-xP-VEI" secondAttribute="width" id="akX-V9-2jm"/>
+                    <constraint firstItem="lxn-o6-av2" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="cah-cs-e5e"/>
+                    <constraint firstItem="pqw-RI-wXf" firstAttribute="width" secondItem="yx8-xP-VEI" secondAttribute="width" id="dc6-MN-Yqg"/>
+                    <constraint firstItem="CYW-s8-6RK" firstAttribute="leading" secondItem="K9a-As-ECb" secondAttribute="trailing" id="gBw-CI-YKq"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="lxn-o6-av2" secondAttribute="trailing" constant="16" id="h2A-Xs-tvp"/>
+                    <constraint firstItem="K9a-As-ECb" firstAttribute="top" secondItem="lxn-o6-av2" secondAttribute="bottom" constant="8" id="i82-5F-GB8"/>
+                    <constraint firstItem="lxn-o6-av2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="16" id="izS-M0-r4O"/>
+                    <constraint firstItem="pqw-RI-wXf" firstAttribute="centerY" secondItem="yx8-xP-VEI" secondAttribute="centerY" id="jW0-cZ-Nt9"/>
+                    <constraint firstAttribute="trailing" secondItem="pqw-RI-wXf" secondAttribute="trailing" id="v7h-AR-BdH"/>
+                    <constraint firstItem="K9a-As-ECb" firstAttribute="height" secondItem="yx8-xP-VEI" secondAttribute="height" id="wG8-gV-fkQ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <point key="canvasLocation" x="7" y="72"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="NotificationBackgroundSuccessIcon.png" width="20" height="17"/>
+    </resources>
+</document>

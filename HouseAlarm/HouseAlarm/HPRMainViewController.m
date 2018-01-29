@@ -12,12 +12,29 @@
 #import "HPRAlarmListsViewController.h"
 #import "PushNotificationManager.h"
 #import <TSMessage.h>
+#import "AlarmTableViewController.h"
+#import "HPRMainHeaderView.h"
+#import "UIColor+Utils.h"
+#import "HPRMonitorNetTableViewCell.h"
+
+#define HPR_SCREEN_WIDTH  [UIScreen mainScreen].bounds.size.width
+#define HPR_HEADER_HEIGHT [UIScreen mainScreen].bounds.size.width * 39 / 125
+
+static NSString * const monitorNetReuseIdentifier = @"monitorNetTableViewCell";
 
 @interface HPRMainViewController ()<UNUserNotificationCenterDelegate>
 
+@property (nonatomic,strong) HPRMainHeaderView * headerView;
+
+
+@property (nonatomic,strong) NSMutableArray* monitorNetDatas;
 
 - (void) cbRecvMsg:(NSNotification*) notification;
+
+
 @end
+
+
 
 @implementation HPRMainViewController
 
@@ -43,20 +60,36 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self layoutUI];
     // Do any additional setup after loading the view.
     [self regNotificationCenter];
     self.slideLeftVC = [[SlideViewController alloc] initWithNibName:@"SlideViewController" bundle:nil];
-       [[UNUserNotificationCenter currentNotificationCenter] setDelegate:self];
+    [[UNUserNotificationCenter currentNotificationCenter] setDelegate:self];
     
+
+    
+    [self setTitle:@"监控"];
+    
+}
+
+- (void)layoutUI{
+    self.view.backgroundColor = [UIColor colorWithHex:0xfcfcfc];
+    [self.tableView registerNib:[UINib nibWithNibName:@"HPRMonitorNetTableViewCell" bundle:nil]
+                               forCellReuseIdentifier:monitorNetReuseIdentifier];
+    self.tableView.estimatedRowHeight = 132;
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    
+    self.headerView = [[HPRMainHeaderView alloc] initWithFrame:CGRectMake(0,0, HPR_SCREEN_WIDTH, HPR_HEADER_HEIGHT)];
+    self.tableView.tableHeaderView = self.headerView;
     
 }
 
 -(IBAction)onClickLeftSlide:(id)sender{
     
-    //[self cw_showDefaultDrawerViewController: self.slideLeftVC];
+    [self cw_showDefaultDrawerViewController: self.slideLeftVC];
 
-    HPRAlarmListsViewController *vc = [[HPRAlarmListsViewController alloc]init];
-    [self presentViewController:vc animated:YES completion:nil];
+    //[self presentViewController:vc animated:YES completion:nil];
 }
 
 -(IBAction)onClickRightFunc:(id)sender{
@@ -64,6 +97,40 @@
      [[PushNotificationManager sharedInstance]normalPushNotificationWithTitle:@"John Winston Lennon" subTitle:@"《Imagine》" body:@"You may say that I'm a dreamer, but I'm not the only one" identifier:@"1-1" timeInterval:3 repeat:NO];   //`repeat` if you pick the repeat property 'YES',you require to set the timeInterval value >= 60second ->是否重复,若要重复->时间间隔应>=60s
     
 }
+
+
+-(NSMutableArray *)monitorNetDatas{
+    if (_monitorNetDatas == nil) {
+        _monitorNetDatas = [NSMutableArray array];
+    }
+    return _monitorNetDatas;
+}
+
+#pragma mark - tableview delegate &datasource
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+#warning Incomplete implementation, return the number of rows
+    return 4;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    HPRMonitorNetTableViewCell *cell = [HPRMonitorNetTableViewCell createReuseCellFromTableView:tableView indexPath:indexPath identifier:monitorNetReuseIdentifier];
+    return cell;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    HPRAlarmListsViewController *vc = [[HPRAlarmListsViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+
+
+
 
 
 #pragma mark - `Receives the push notification in the foreground`->`前台收到推送`

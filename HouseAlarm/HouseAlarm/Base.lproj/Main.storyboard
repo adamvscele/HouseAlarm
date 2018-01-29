@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="GtN-nJ-ipR">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="1bZ-9V-yWN">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,7 +9,23 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Main View Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="u6G-bj-jI7">
+            <objects>
+                <navigationController id="1bZ-9V-yWN" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="izX-FG-sOC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="5Xr-pm-lbg" kind="relationship" relationship="rootViewController" id="qrC-pZ-do7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OZc-Vr-nU0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1616" y="85"/>
+        </scene>
+        <!--主页-->
         <scene sceneID="9hT-Y2-G1U">
             <objects>
                 <viewController storyboardIdentifier="mainface" id="GtN-nJ-ipR" customClass="HPRMainViewController" sceneMemberID="viewController">
@@ -20,42 +36,67 @@
                     <view key="view" contentMode="scaleToFill" id="gzF-CY-NrG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sis-9C-CXT">
-                                <rect key="frame" x="0.0" y="28" width="31" height="30"/>
-                                <state key="normal" title="菜单"/>
-                                <connections>
-                                    <action selector="onClickLeftSlide:" destination="GtN-nJ-ipR" eventType="touchUpInside" id="5Qh-vV-8tB"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="标题" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qKc-db-fT8">
-                                <rect key="frame" x="170" y="28" width="35" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a4w-lD-o5j">
-                                <rect key="frame" x="344" y="28" width="31" height="30"/>
-                                <state key="normal" title="功能"/>
-                                <connections>
-                                    <action selector="onClickRightFunc:" destination="GtN-nJ-ipR" eventType="touchUpInside" id="t5s-aU-Os4"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="a4w-lD-o5j" firstAttribute="top" secondItem="l8G-kE-oQf" secondAttribute="bottom" constant="8" id="3rR-Uj-fO0"/>
-                            <constraint firstAttribute="trailing" secondItem="a4w-lD-o5j" secondAttribute="trailing" id="Jjb-Xy-nM1"/>
-                            <constraint firstItem="sis-9C-CXT" firstAttribute="leading" secondItem="gzF-CY-NrG" secondAttribute="leading" id="M1J-U9-0tv"/>
-                            <constraint firstItem="qKc-db-fT8" firstAttribute="top" secondItem="l8G-kE-oQf" secondAttribute="bottom" constant="8" id="Pez-9Z-htH"/>
-                            <constraint firstItem="sis-9C-CXT" firstAttribute="top" secondItem="l8G-kE-oQf" secondAttribute="bottom" constant="8" id="jOy-01-gyd"/>
-                            <constraint firstItem="qKc-db-fT8" firstAttribute="centerX" secondItem="gzF-CY-NrG" secondAttribute="centerX" id="tqU-Qo-bNu"/>
-                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="主页" id="cFw-Di-NOd" userLabel="主页">
+                        <barButtonItem key="leftBarButtonItem" image="NotificationBackgroundSuccessIcon.png" id="fNn-WJ-Wzt" userLabel="左菜单">
+                            <connections>
+                                <action selector="onClickLeftSlide:" destination="GtN-nJ-ipR" id="K8b-DF-WAi"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="NotificationBackgroundSuccessIcon.png" id="Eig-Yh-aGG" userLabel="右菜单">
+                            <connections>
+                                <action selector="onClickRightFunc:" destination="GtN-nJ-ipR" id="SHb-Fn-o5i"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G35-LM-nEb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-130" y="102"/>
+            <point key="canvasLocation" x="-449" y="473"/>
+        </scene>
+        <!--主页-->
+        <scene sceneID="Th3-06-C4m">
+            <objects>
+                <tableViewController id="5Xr-pm-lbg" customClass="HPRMainViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="dMQ-sa-OiH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="xg7-Pa-k4G">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xg7-Pa-k4G" id="veA-Ko-vga">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="5Xr-pm-lbg" id="cVv-u8-itS"/>
+                            <outlet property="delegate" destination="5Xr-pm-lbg" id="eKf-Bm-7rH"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="主页" id="jXp-Dl-Igs">
+                        <barButtonItem key="leftBarButtonItem" image="NotificationBackgroundSuccessIcon.png" id="3YZ-bq-rxX">
+                            <connections>
+                                <action selector="onClickLeftSlide:" destination="5Xr-pm-lbg" id="dIA-kd-We0"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="NotificationBackgroundSuccessIcon.png" id="omj-iw-rU9">
+                            <connections>
+                                <action selector="onClickRightFunc:" destination="5Xr-pm-lbg" id="9uc-lO-mnX"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iDZ-36-jsS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-364" y="-221"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="NotificationBackgroundSuccessIcon.png" width="20" height="17"/>
+    </resources>
 </document>

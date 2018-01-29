@@ -10,7 +10,7 @@
 
 @interface UIColor (Utils)
 + (UIColor *)colorWithCGColor:(CGColorRef)cgColor alpha:(CGFloat)alpha;
-+ (UIColor *)colorWitHex:(int)hex;
++ (UIColor *)colorWithHex:(int)hex;
 
 + (UIColor *)selectCellColor;
 
