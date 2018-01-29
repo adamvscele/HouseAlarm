@@ -9,6 +9,8 @@
 #import "SocketClient.h"
 #import "DIYOutBuffer.h"
 
+#import "HPRNotification.h"
+
 #define BUFF_MAX_SIZE 1024
 
 @interface SocketClient ()<NSStreamDelegate>
@@ -160,9 +162,11 @@
             [_lockInput lock];
             
             [_inBuf appendBytes:(const char *)buf length:lenRecv];
-            
+            NSString *msg = [self stringWithData:_inBuf];
             LogHA(@"onEventIn dataString:<%@>",[self stringWithData:_inBuf]);
             
+            
+            [HPRNotification postNotification:HPRNotificationRecvdMessage object:msg userInfo:nil];
             [_lockInput unlock];
             
             

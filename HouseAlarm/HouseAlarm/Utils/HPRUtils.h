@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "UIColor+Utils.h"
 
 @interface HPRUtils : NSObject
 

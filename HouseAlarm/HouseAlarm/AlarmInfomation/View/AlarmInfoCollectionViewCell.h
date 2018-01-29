@@ -10,4 +10,10 @@
 
 @interface AlarmInfoCollectionViewCell : UICollectionViewCell
 
+
+
++ (instancetype)createReusedAlarmInfoCollectionViewCell:(UICollectionView* )collectionVC
+                                             identifier:(NSString* )identifier
+                                              indexPath:(NSIndexPath* )path
+                                                   flag:(NSString* )flag;
 @end

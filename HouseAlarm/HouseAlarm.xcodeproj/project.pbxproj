@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		223D2149201C4D2A00F21344 /* AlarmListCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 223D2148201C4D2A00F21344 /* AlarmListCollectionViewController.m */; };
+		223D214E201C550000F21344 /* AlarmInfoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 223D214D201C550000F21344 /* AlarmInfoCollectionViewCell.m */; };
+		223D2151201C5C8200F21344 /* HPRAlarmCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 223D2150201C5C8200F21344 /* HPRAlarmCell.m */; };
+		223D2155201C620B00F21344 /* UIColor+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 223D2154201C620B00F21344 /* UIColor+Utils.m */; };
+		223D2158201C644400F21344 /* HPRUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 223D2157201C644400F21344 /* HPRUtils.m */; };
+		223D215C201C678200F21344 /* HPRListItemBean.m in Sources */ = {isa = PBXBuildFile; fileRef = 223D215B201C678200F21344 /* HPRListItemBean.m */; };
+		223D215F201C7E5200F21344 /* HPRAlarmListsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 223D215E201C7E5200F21344 /* HPRAlarmListsViewController.m */; };
+		223D2162201C7FE800F21344 /* TitleBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 223D2161201C7FE800F21344 /* TitleBarView.m */; };
+		223D2165201CA71000F21344 /* AlarmTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 223D2164201CA71000F21344 /* AlarmTableViewController.m */; };
 		2287F9BA201AD34600D6A257 /* HPRConstant.m in Sources */ = {isa = PBXBuildFile; fileRef = 2287F9B9201AD34600D6A257 /* HPRConstant.m */; };
 		2287F9BD201AF07600D6A257 /* HPRMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2287F9BC201AF07600D6A257 /* HPRMainViewController.m */; };
 		2287F9C2201B048500D6A257 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2287F9C1201B048500D6A257 /* Login.storyboard */; };
@@ -28,6 +37,24 @@
 /* Begin PBXFileReference section */
 		15C27B9FC7C1F4FA89F3FA18 /* libPods-HouseAlarm.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HouseAlarm.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AA5D8FF2E17884CF64BBFB7 /* Pods-HouseAlarm.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HouseAlarm.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HouseAlarm/Pods-HouseAlarm.debug.xcconfig"; sourceTree = "<group>"; };
+		223D2147201C4D2A00F21344 /* AlarmListCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlarmListCollectionViewController.h; sourceTree = "<group>"; };
+		223D2148201C4D2A00F21344 /* AlarmListCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlarmListCollectionViewController.m; sourceTree = "<group>"; };
+		223D214C201C550000F21344 /* AlarmInfoCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlarmInfoCollectionViewCell.h; sourceTree = "<group>"; };
+		223D214D201C550000F21344 /* AlarmInfoCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlarmInfoCollectionViewCell.m; sourceTree = "<group>"; };
+		223D214F201C5C8200F21344 /* HPRAlarmCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPRAlarmCell.h; sourceTree = "<group>"; };
+		223D2150201C5C8200F21344 /* HPRAlarmCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPRAlarmCell.m; sourceTree = "<group>"; };
+		223D2153201C620B00F21344 /* UIColor+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Utils.h"; sourceTree = "<group>"; };
+		223D2154201C620B00F21344 /* UIColor+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Utils.m"; sourceTree = "<group>"; };
+		223D2156201C644400F21344 /* HPRUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPRUtils.h; sourceTree = "<group>"; };
+		223D2157201C644400F21344 /* HPRUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPRUtils.m; sourceTree = "<group>"; };
+		223D215A201C678200F21344 /* HPRListItemBean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPRListItemBean.h; sourceTree = "<group>"; };
+		223D215B201C678200F21344 /* HPRListItemBean.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPRListItemBean.m; sourceTree = "<group>"; };
+		223D215D201C7E5200F21344 /* HPRAlarmListsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPRAlarmListsViewController.h; sourceTree = "<group>"; };
+		223D215E201C7E5200F21344 /* HPRAlarmListsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPRAlarmListsViewController.m; sourceTree = "<group>"; };
+		223D2160201C7FE800F21344 /* TitleBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TitleBarView.h; sourceTree = "<group>"; };
+		223D2161201C7FE800F21344 /* TitleBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TitleBarView.m; sourceTree = "<group>"; };
+		223D2163201CA71000F21344 /* AlarmTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlarmTableViewController.h; sourceTree = "<group>"; };
+		223D2164201CA71000F21344 /* AlarmTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlarmTableViewController.m; sourceTree = "<group>"; };
 		2287F9B8201AD34600D6A257 /* HPRConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPRConstant.h; sourceTree = "<group>"; };
 		2287F9B9201AD34600D6A257 /* HPRConstant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPRConstant.m; sourceTree = "<group>"; };
 		2287F9BB201AF07600D6A257 /* HPRMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HPRMainViewController.h; path = ../HPRMainViewController.h; sourceTree = "<group>"; };
@@ -79,6 +106,76 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		223D2144201C4CDD00F21344 /* AlarmInfomation */ = {
+			isa = PBXGroup;
+			children = (
+				223D2145201C4CE300F21344 /* StatMenuList */,
+			);
+			path = AlarmInfomation;
+			sourceTree = "<group>";
+		};
+		223D2145201C4CE300F21344 /* StatMenuList */ = {
+			isa = PBXGroup;
+			children = (
+				223D2159201C676100F21344 /* Model */,
+				223D214A201C548600F21344 /* View */,
+				223D2146201C4CF700F21344 /* Controller */,
+			);
+			name = StatMenuList;
+			sourceTree = "<group>";
+		};
+		223D2146201C4CF700F21344 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				223D2147201C4D2A00F21344 /* AlarmListCollectionViewController.h */,
+				223D2148201C4D2A00F21344 /* AlarmListCollectionViewController.m */,
+				223D215D201C7E5200F21344 /* HPRAlarmListsViewController.h */,
+				223D215E201C7E5200F21344 /* HPRAlarmListsViewController.m */,
+				223D2163201CA71000F21344 /* AlarmTableViewController.h */,
+				223D2164201CA71000F21344 /* AlarmTableViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		223D214A201C548600F21344 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				223D214B201C548D00F21344 /* Cell */,
+				223D2160201C7FE800F21344 /* TitleBarView.h */,
+				223D2161201C7FE800F21344 /* TitleBarView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		223D214B201C548D00F21344 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				223D214C201C550000F21344 /* AlarmInfoCollectionViewCell.h */,
+				223D214D201C550000F21344 /* AlarmInfoCollectionViewCell.m */,
+				223D214F201C5C8200F21344 /* HPRAlarmCell.h */,
+				223D2150201C5C8200F21344 /* HPRAlarmCell.m */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		223D2152201C61D900F21344 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				223D2153201C620B00F21344 /* UIColor+Utils.h */,
+				223D2154201C620B00F21344 /* UIColor+Utils.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		223D2159201C676100F21344 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				223D215A201C678200F21344 /* HPRListItemBean.h */,
+				223D215B201C678200F21344 /* HPRListItemBean.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		2287F9C3201B094600D6A257 /* MainMVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +219,8 @@
 		22ED7A33201730BB00AFB4C5 /* HouseAlarm */ = {
 			isa = PBXGroup;
 			children = (
+				223D2152201C61D900F21344 /* Categories */,
+				223D2144201C4CDD00F21344 /* AlarmInfomation */,
 				2287F9C9201B584A00D6A257 /* PushNotificationManager */,
 				2287F9C3201B094600D6A257 /* MainMVC */,
 				22F941462019D1D300EA955E /* Utils */,
@@ -197,6 +296,8 @@
 			isa = PBXGroup;
 			children = (
 				22F941472019D20600EA955E /* Notification */,
+				223D2156201C644400F21344 /* HPRUtils.h */,
+				223D2157201C644400F21344 /* HPRUtils.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -316,6 +417,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-HouseAlarm/Pods-HouseAlarm-resources.sh",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
 				"${PODS_ROOT}/TSMessages/Pod/Assets/NotificationBackgroundError.png",
 				"${PODS_ROOT}/TSMessages/Pod/Assets/NotificationBackgroundError@2x.png",
 				"${PODS_ROOT}/TSMessages/Pod/Assets/NotificationBackgroundErrorIcon.png",
@@ -365,15 +467,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				223D214E201C550000F21344 /* AlarmInfoCollectionViewCell.m in Sources */,
+				223D2158201C644400F21344 /* HPRUtils.m in Sources */,
 				2287F9CC201B584A00D6A257 /* PushNotificationManager.m in Sources */,
 				2287F9BD201AF07600D6A257 /* HPRMainViewController.m in Sources */,
+				223D2151201C5C8200F21344 /* HPRAlarmCell.m in Sources */,
+				223D2165201CA71000F21344 /* AlarmTableViewController.m in Sources */,
 				22ED7A5520173A5E00AFB4C5 /* AppDelegate.m in Sources */,
 				22ED7A42201730BB00AFB4C5 /* HouseAlarm.xcdatamodeld in Sources */,
+				223D215F201C7E5200F21344 /* HPRAlarmListsViewController.m in Sources */,
 				22ED7A5A20173C7800AFB4C5 /* SocketClient.m in Sources */,
+				223D2162201C7FE800F21344 /* TitleBarView.m in Sources */,
+				223D2155201C620B00F21344 /* UIColor+Utils.m in Sources */,
 				2287F9BA201AD34600D6A257 /* HPRConstant.m in Sources */,
 				22ED7A36201730BB00AFB4C5 /* main.m in Sources */,
 				22ED7A5E20173F5800AFB4C5 /* DIYOutBuffer.m in Sources */,
+				223D215C201C678200F21344 /* HPRListItemBean.m in Sources */,
 				22F9414A2019D23200EA955E /* HPRNotification.m in Sources */,
+				223D2149201C4D2A00F21344 /* AlarmListCollectionViewController.m in Sources */,
 				2287F9C7201B519400D6A257 /* SlideViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

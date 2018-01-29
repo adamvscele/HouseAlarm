@@ -8,13 +8,25 @@
 
 #import "AlarmListCollectionViewController.h"
 
-@interface AlarmListCollectionViewController ()
+@interface AlarmListCollectionViewController (){
+    NSString* _curStatItem;
+}
 
 @end
 
 @implementation AlarmListCollectionViewController
 
 static NSString * const reuseIdentifier = @"Cell";
+
+
+
+- (void)setStatMenuList:(NSArray<NSString *> *)statMenuList{
+    self.statMenuList = statMenuList;
+    
+    
+    
+    [self.collectionView reloadData];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -27,6 +39,9 @@ static NSString * const reuseIdentifier = @"Cell";
     
     // Do any additional setup after loading the view.
 }
+
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -53,10 +68,13 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
 #warning Incomplete implementation, return the number of items
-    return 0;
+     return self.statMenuList.count;;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+    _curStatItem = self.statMenuList[indexPath.row];
+    
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     
     // Configure the cell

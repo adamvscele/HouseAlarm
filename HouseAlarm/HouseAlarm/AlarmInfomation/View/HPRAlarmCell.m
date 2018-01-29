@@ -7,8 +7,22 @@
 //
 
 #import "HPRAlarmCell.h"
+#import "HPRUtils.h"
+#import "HPRListItemBean.h"
 
-@implementation HPRAlarmCell
+@implementation HPRAlarmCell{
+    
+    UILabel *descLabel;
+    UILabel *timeLabel;
+}
+
+
+
++(instancetype)createReusedCellFromTableView:(UITableView *)tableView indexPath:(NSIndexPath *)indexPath identifier:(NSString *)identifier{
+    HPRAlarmCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier forIndexPath:indexPath];
+    
+    return cell;
+}
 
 - (void)awakeFromNib {
     [super awakeFromNib];
@@ -19,6 +33,44 @@
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
+}
+
+
+- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
+    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+    if (self) {
+        [self addCustomViews];
+    }
+    return self;
+}
+
+
+- (void)addCustomViews{
+    descLabel = [UILabel new];
+    descLabel.numberOfLines =2;
+    descLabel.lineBreakMode = NSLineBreakByTruncatingTail;
+    descLabel.textColor = [UIColor titleColor];
+    descLabel.font = [UIFont systemFontOfSize:alarm_desc_font_size];
+    [self.contentView addSubview:descLabel];
+    
+     timeLabel= [UILabel new];
+    timeLabel.numberOfLines =2;
+    timeLabel.lineBreakMode = NSLineBreakByTruncatingTail;
+    timeLabel.textColor = [UIColor titleColor];
+    timeLabel.font = [UIFont systemFontOfSize:alarm_desc_font_size];
+    [self.contentView addSubview:timeLabel];
+}
+
+-(void)layoutSubviews{
+    [super layoutSubviews];
+    descLabel.frame = _listItemBean.alarmCellLayoutInfo.descLbFrame;
+    timeLabel.frame = _listItemBean.alarmCellLayoutInfo.timeLbFrame;
+}
+-(void)setListItemBean:(HPRListItemBean *)listItemBean{
+    _listItemBean = listItemBean;
+    descLabel.text = _listItemBean.desc;
+    timeLabel.text = _listItemBean.time;
+    [self layoutSubviews];
 }
 
 @end

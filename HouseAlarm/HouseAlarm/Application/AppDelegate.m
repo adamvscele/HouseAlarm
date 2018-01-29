@@ -35,7 +35,7 @@
     int sysVer =kSystemVersion;
     if (sysVer >= 10.0) {
         UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
-        center.delegate = self;
+        //center.delegate = self;
         UNAuthorizationOptions types=UNAuthorizationOptionBadge|UNAuthorizationOptionAlert|UNAuthorizationOptionSound;
         [center requestAuthorizationWithOptions:types completionHandler:^(BOOL granted, NSError * _Nullable error) {
             if (granted) {
@@ -56,8 +56,8 @@
     
    //[self test];
     
-   // LogHA(@"*******application launched main thread %@",[NSThread currentThread]);
-   // [[SocketClient instance] connect:REMOTE_HOST port:REMOTE_PORT];
+    LogHA(@"*******application launched main thread %@",[NSThread currentThread]);
+    [[SocketClient instance] connect:REMOTE_HOST port:REMOTE_PORT];
     
     //self.window =[[UIWindow alloc]initWithFrame:[[UIScreen mainScreen] bounds] ];
    // UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];

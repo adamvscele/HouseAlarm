@@ -9,12 +9,14 @@
 #import "HPRMainViewController.h"
 #import "UIViewController+CWLateralSlide.h"
 #import "SlideViewController.h"
-
+#import "HPRAlarmListsViewController.h"
 #import "PushNotificationManager.h"
 #import <TSMessage.h>
+
 @interface HPRMainViewController ()<UNUserNotificationCenterDelegate>
 
 
+- (void) cbRecvMsg:(NSNotification*) notification;
 @end
 
 @implementation HPRMainViewController
@@ -26,8 +28,16 @@
                              object:nil];
 }
 
+- (void)insideNotification:(NSString*) nitification{
+    
+    [[PushNotificationManager sharedInstance]normalPushNotificationWithTitle:@"John Winston Lennon" subTitle:@"《Imagine》"
+                                                                        body: nitification identifier:@"1-1" timeInterval:1 repeat:NO];   //`repeat` if you pick the repeat property 'YES',you require to set the timeInterval value >= 60second ->是否重复,若要重复->时间间隔应>=60s
+}
+
 - (void) cbRecvMsg:(NSNotification*) notification{
     LogHA(@"Main UI  cbRecvMsg");
+     NSString* body = (NSString*)notification.object;
+     [self insideNotification:body];
 }
 
 
@@ -43,8 +53,10 @@
 
 -(IBAction)onClickLeftSlide:(id)sender{
     
-    [self cw_showDefaultDrawerViewController: self.slideLeftVC];
+    //[self cw_showDefaultDrawerViewController: self.slideLeftVC];
 
+    HPRAlarmListsViewController *vc = [[HPRAlarmListsViewController alloc]init];
+    [self presentViewController:vc animated:YES completion:nil];
 }
 
 -(IBAction)onClickRightFunc:(id)sender{
@@ -52,6 +64,7 @@
      [[PushNotificationManager sharedInstance]normalPushNotificationWithTitle:@"John Winston Lennon" subTitle:@"《Imagine》" body:@"You may say that I'm a dreamer, but I'm not the only one" identifier:@"1-1" timeInterval:3 repeat:NO];   //`repeat` if you pick the repeat property 'YES',you require to set the timeInterval value >= 60second ->是否重复,若要重复->时间间隔应>=60s
     
 }
+
 
 #pragma mark - `Receives the push notification in the foreground`->`前台收到推送`
 - (void)userNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification withCompletionHandler:(void (^)(UNNotificationPresentationOptions options))completionHandler

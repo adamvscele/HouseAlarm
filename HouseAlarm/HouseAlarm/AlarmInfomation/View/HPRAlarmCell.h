@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#define AlarmCellReuseIdentifier  @"HPRAlarmCell"
 
+@class HPRListItemBean;
 @interface HPRAlarmCell : UITableViewCell
 
++ (instancetype) createReusedCellFromTableView:(UITableView *)tableView
+                               indexPath:(NSIndexPath *)indexPath
+                              identifier:(NSString *)identifier;
+
+@property (nonatomic,strong) HPRListItemBean *listItemBean;
 @end

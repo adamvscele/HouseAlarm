@@ -11,4 +11,7 @@
 @interface HPRMainViewController : UIViewController
 
 @property (nonatomic,strong)SlideViewController *slideLeftVC;
+
+
+
 @end

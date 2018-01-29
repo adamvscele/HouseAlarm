@@ -10,4 +10,11 @@
 
 @interface TitleBarView : UIScrollView
 
+@property (nonatomic,strong)NSMutableArray *titleButtons;
+@property (nonatomic,strong) void(^titleBtnClicked)(NSUInteger index);
+
+- (instancetype)initWithFrame:(CGRect)frame andTitles:(NSArray* )titles;
+
+
+- (void)reloadAllButtonsOfTitleBarWithTitles:(NSArray*)titles;
 @end

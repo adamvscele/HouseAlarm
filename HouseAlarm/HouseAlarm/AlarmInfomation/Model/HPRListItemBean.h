@@ -7,7 +7,23 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+@class AlarmCell_layoutInfo;
 
-@interface AlarmItemBean : NSObject
+#define alarm_desc_font_size 15
 
+@interface HPRListItemBean : NSObject
+
+@property (nonatomic,strong) NSString* desc;
+@property (nonatomic,strong) NSString* time;
+
+
+
+
+@property (nonatomic,strong) AlarmCell_layoutInfo *alarmCellLayoutInfo;
+@end
+
+@interface AlarmCell_layoutInfo :NSObject
+@property (nonatomic,assign) CGRect descLbFrame;
+@property (nonatomic,assign) CGRect timeLbFrame;
 @end

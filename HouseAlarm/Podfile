@@ -11,5 +11,7 @@ pod 'AFOnoResponseSerializer'
 pod 'Masonry'
 pod 'CWLateralSlide', '~> 1.5.5'
 pod 'TSMessages'
+pod 'MJRefresh'
+pod 'YYKit'
 
 end

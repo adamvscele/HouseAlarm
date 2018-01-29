@@ -10,4 +10,6 @@
 
 @interface AlarmListCollectionViewController : UICollectionViewController
 
+@property (nonatomic,strong) NSArray <NSString* >* statMenuList;
+
 @end
