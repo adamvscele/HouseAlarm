@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -24,36 +23,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OZc-Vr-nU0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1616" y="85"/>
-        </scene>
-        <!--主页-->
-        <scene sceneID="9hT-Y2-G1U">
-            <objects>
-                <viewController storyboardIdentifier="mainface" id="GtN-nJ-ipR" customClass="HPRMainViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="l8G-kE-oQf"/>
-                        <viewControllerLayoutGuide type="bottom" id="h97-sg-q8j"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="gzF-CY-NrG">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="主页" id="cFw-Di-NOd" userLabel="主页">
-                        <barButtonItem key="leftBarButtonItem" image="NotificationBackgroundSuccessIcon.png" id="fNn-WJ-Wzt" userLabel="左菜单">
-                            <connections>
-                                <action selector="onClickLeftSlide:" destination="GtN-nJ-ipR" id="K8b-DF-WAi"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" image="NotificationBackgroundSuccessIcon.png" id="Eig-Yh-aGG" userLabel="右菜单">
-                            <connections>
-                                <action selector="onClickRightFunc:" destination="GtN-nJ-ipR" id="SHb-Fn-o5i"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="G35-LM-nEb" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-449" y="473"/>
         </scene>
         <!--主页-->
         <scene sceneID="Th3-06-C4m">
@@ -79,24 +48,24 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="主页" id="jXp-Dl-Igs">
-                        <barButtonItem key="leftBarButtonItem" image="NotificationBackgroundSuccessIcon.png" id="3YZ-bq-rxX">
+                        <barButtonItem key="leftBarButtonItem" image="left_menu" id="3YZ-bq-rxX" userLabel="left_menu">
                             <connections>
                                 <action selector="onClickLeftSlide:" destination="5Xr-pm-lbg" id="dIA-kd-We0"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" image="NotificationBackgroundSuccessIcon.png" id="omj-iw-rU9">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="omj-iw-rU9">
                             <connections>
-                                <action selector="onClickRightFunc:" destination="5Xr-pm-lbg" id="9uc-lO-mnX"/>
+                                <action selector="navRightClick:" destination="5Xr-pm-lbg" id="aB0-ue-hZL"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iDZ-36-jsS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-364" y="-221"/>
+            <point key="canvasLocation" x="-294" y="84"/>
         </scene>
     </scenes>
     <resources>
-        <image name="NotificationBackgroundSuccessIcon.png" width="20" height="17"/>
+        <image name="left_menu" width="27" height="17"/>
     </resources>
 </document>

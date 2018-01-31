@@ -21,6 +21,10 @@
     
     return [UIColor colorWithHex:hex alpha:1.0];
 }
+/*导航栏背景*/
++(UIColor *)navigationbarColor{
+    return [UIColor colorWithHex:0x0081ff];
+}
 
 +(UIColor *)selectCellColor{
     return [UIColor colorWithHex:0xfcfcfc];

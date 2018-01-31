@@ -50,7 +50,7 @@
     [self.contentView addSubview:self.imageView];
     [self.contentView addSubview:self.button];
     
-    [self.button setCenter:CGPointMake(kHcdGuideViewBounds.size.width / 2, kHcdGuideViewBounds.size.height - 100)];
+    [self.button setCenter:CGPointMake(kHcdGuideViewBounds.size.width / 2, kHcdGuideViewBounds.size.height - 50)];
 }
 
 @end

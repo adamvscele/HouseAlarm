@@ -11,6 +11,9 @@
 
 #import "SocketClient.h"
 #import "HPRMainViewController.h"
+#import "UIColor+Utils.h"
+#import "HcdGuideView.h"
+#import "HPRLoginViewController.h"
 
 #define kSystemVersion [[UIDevice currentDevice].systemVersion floatValue]
 @interface AppDelegate ()<UNUserNotificationCenterDelegate>
@@ -32,6 +35,36 @@
         self.window.backgroundColor =[UIColor whiteColor];
         [self.window makeKeyAndVisible];
     }*/
+    
+    
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    
+    BOOL bLogined = [userDefaults boolForKey:@"user_logined"];
+  
+    bLogined = true;
+    self.window =[[UIWindow alloc]initWithFrame:[[UIScreen mainScreen] bounds] ];
+      self.window.backgroundColor =[UIColor whiteColor];
+    if (bLogined) {
+        
+    //app init over 后 HPRMainViewController再显示 因为navcontroller过滤
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        HPRMainViewController *vc =[storyboard instantiateInitialViewController];
+        self.window.rootViewController =vc;
+        
+
+    }else{
+        //HPRLoginViewController先显示 后app init over
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Login" bundle:nil];
+        HPRLoginViewController *vc =[storyboard instantiateInitialViewController];
+        self.window.rootViewController =vc;
+    }
+     [self.window makeKeyAndVisible];
+    
+    [[HcdGuideView sharedInstance] showGuideViews:self.window];
+
+    
+    
+     LogHA(@"app init over");
     int sysVer =kSystemVersion;
     if (sysVer >= 10.0) {
         UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
@@ -58,6 +91,8 @@
     
     LogHA(@"*******application launched main thread %@",[NSThread currentThread]);
     [[SocketClient instance] connect:REMOTE_HOST port:REMOTE_PORT];
+    
+    [self setupWholeAppearance];
     
     //self.window =[[UIWindow alloc]initWithFrame:[[UIScreen mainScreen] bounds] ];
    // UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
@@ -96,6 +131,21 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     // Saves changes in the application's managed object context before the application terminates.
     [self saveContext];
+}
+
+
+#pragma mark -设置外观
+
+- (void)setupWholeAppearance{
+    [UIApplication sharedApplication].statusBarHidden = NO;
+    
+    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
+    
+    
+    NSDictionary *navBarTitletextAttr = @{NSForegroundColorAttributeName:[UIColor whiteColor]};
+    [[UINavigationBar appearance] setTitleTextAttributes:navBarTitletextAttr];
+    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+    [[UINavigationBar appearance] setBarTintColor:[UIColor navigationbarColor]];
 }
 
 

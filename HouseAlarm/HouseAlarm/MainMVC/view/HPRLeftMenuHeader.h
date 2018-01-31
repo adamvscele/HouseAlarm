@@ -9,5 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @interface HPRLeftMenuHeader : UIView
+@property (nonatomic,strong)UIImageView *bgImage;
+@property (nonatomic,strong)UIImageView *portraitImage;
+@property (nonatomic,strong)UIImageView *goDetail;
+
+@property (nonatomic,strong)UILabel * userNameLabel;
+@property (nonatomic,strong)UILabel *descLabel;
 
 @end

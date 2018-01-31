@@ -81,6 +81,13 @@
         [self.cover addGestureRecognizer:tapCover];
         
         self.backgroundColor = [UIColor clearColor];
+//        [UIView animateWithDuration:1.0f delay:0.5f options:UIViewAnimationOptionBeginFromCurrentState animations:^{
+//            menu.alpha = 0.0f;
+//            menu.layer.transform = CATransform3DScale(CATransform3DIdentity, 2.0f, 2.0f, 1.0f);
+//        } completion:^(BOOL finished) {
+//            
+//        }];
+
         [[UIApplication sharedApplication].keyWindow addSubview:self];
         
         [self addSubview:self.tableView];

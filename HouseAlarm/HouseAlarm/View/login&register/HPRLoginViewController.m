@@ -15,8 +15,18 @@
 @implementation HPRLoginViewController
 
 - (void)viewDidLoad {
+    LogHA(@"viewDidLoad");
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+}
+
+- (void) viewWillAppear:(BOOL)animated{
+     LogHA(@"viewWillAppear");
+    [super viewWillAppear:animated];
+}
+- (void)viewDidAppear:(BOOL)animated{
+     LogHA(@"viewDidAppear");
+    [super viewDidAppear:animated];
 }
 
 - (void)didReceiveMemoryWarning {

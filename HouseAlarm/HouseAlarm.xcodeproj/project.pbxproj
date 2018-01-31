@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		220966DB2021B75F00457FD7 /* HcdGuideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 220966D82021B75F00457FD7 /* HcdGuideView.m */; };
+		220966DC2021B75F00457FD7 /* HcdGuideViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 220966DA2021B75F00457FD7 /* HcdGuideViewCell.m */; };
+		220966E12021BAE600457FD7 /* g2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 220966E02021BAE600457FD7 /* g2.jpg */; };
+		220966E92021C6E900457FD7 /* g1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 220966E82021C6E900457FD7 /* g1.jpg */; };
+		220966EB2021C6F900457FD7 /* g3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 220966EA2021C6F900457FD7 /* g3.jpg */; };
 		223D214E201C550000F21344 /* AlarmInfoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 223D214D201C550000F21344 /* AlarmInfoCollectionViewCell.m */; };
 		223D2151201C5C8200F21344 /* HPRAlarmCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 223D2150201C5C8200F21344 /* HPRAlarmCell.m */; };
 		223D2155201C620B00F21344 /* UIColor+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 223D2154201C620B00F21344 /* UIColor+Utils.m */; };
@@ -15,14 +20,18 @@
 		223D215F201C7E5200F21344 /* HPRAlarmListsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 223D215E201C7E5200F21344 /* HPRAlarmListsViewController.m */; };
 		223D2162201C7FE800F21344 /* TitleBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 223D2161201C7FE800F21344 /* TitleBarView.m */; };
 		223D2165201CA71000F21344 /* AlarmTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 223D2164201CA71000F21344 /* AlarmTableViewController.m */; };
+		2247177E202079500081B816 /* JMDropMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 2247177D202079500081B816 /* JMDropMenu.m */; };
+		22471784202080390081B816 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22471783202080390081B816 /* Login.storyboard */; };
+		2264E0C8201FF9DF00FDA7C4 /* HPRLeftMenuHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 2264E0C7201FF9DF00FDA7C4 /* HPRLeftMenuHeader.m */; };
+		2264E0CD202010D000FDA7C4 /* HPRLeftMenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2264E0CB202010D000FDA7C4 /* HPRLeftMenuCell.m */; };
+		2264E0CE202010D000FDA7C4 /* HPRLeftMenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2264E0CC202010D000FDA7C4 /* HPRLeftMenuCell.xib */; };
+		2266BD712021894600890A7C /* HPRLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2266BD702021894600890A7C /* HPRLoginViewController.m */; };
 		226D7C6F201EED75002D273A /* HPRMainHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 226D7C6E201EED75002D273A /* HPRMainHeaderView.m */; };
 		226D7C76201EF037002D273A /* HPRMonitorNetTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 226D7C74201EF036002D273A /* HPRMonitorNetTableViewCell.m */; };
 		226D7C77201EF037002D273A /* HPRMonitorNetTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 226D7C75201EF036002D273A /* HPRMonitorNetTableViewCell.xib */; };
 		2287F9BA201AD34600D6A257 /* HPRConstant.m in Sources */ = {isa = PBXBuildFile; fileRef = 2287F9B9201AD34600D6A257 /* HPRConstant.m */; };
 		2287F9BD201AF07600D6A257 /* HPRMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2287F9BC201AF07600D6A257 /* HPRMainViewController.m */; };
-		2287F9C2201B048500D6A257 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2287F9C1201B048500D6A257 /* Login.storyboard */; };
 		2287F9C7201B519400D6A257 /* SlideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2287F9C5201B519400D6A257 /* SlideViewController.m */; };
-		2287F9C8201B519400D6A257 /* SlideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2287F9C6201B519400D6A257 /* SlideViewController.xib */; };
 		2287F9CC201B584A00D6A257 /* PushNotificationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2287F9CB201B584A00D6A257 /* PushNotificationManager.m */; };
 		22ED7A36201730BB00AFB4C5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 22ED7A35201730BB00AFB4C5 /* main.m */; };
 		22ED7A3F201730BB00AFB4C5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22ED7A3D201730BB00AFB4C5 /* Main.storyboard */; };
@@ -39,6 +48,13 @@
 /* Begin PBXFileReference section */
 		15C27B9FC7C1F4FA89F3FA18 /* libPods-HouseAlarm.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HouseAlarm.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AA5D8FF2E17884CF64BBFB7 /* Pods-HouseAlarm.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HouseAlarm.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HouseAlarm/Pods-HouseAlarm.debug.xcconfig"; sourceTree = "<group>"; };
+		220966D72021B75F00457FD7 /* HcdGuideView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HcdGuideView.h; sourceTree = "<group>"; };
+		220966D82021B75F00457FD7 /* HcdGuideView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HcdGuideView.m; sourceTree = "<group>"; };
+		220966D92021B75F00457FD7 /* HcdGuideViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HcdGuideViewCell.h; sourceTree = "<group>"; };
+		220966DA2021B75F00457FD7 /* HcdGuideViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HcdGuideViewCell.m; sourceTree = "<group>"; };
+		220966E02021BAE600457FD7 /* g2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = g2.jpg; sourceTree = "<group>"; };
+		220966E82021C6E900457FD7 /* g1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = g1.jpg; path = "../../../../../../../../Desktop/新建文件夹 (4)/g1.jpg"; sourceTree = "<group>"; };
+		220966EA2021C6F900457FD7 /* g3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = g3.jpg; path = "../../../../../../../../Desktop/新建文件夹 (4)/g3.jpg"; sourceTree = "<group>"; };
 		223D214C201C550000F21344 /* AlarmInfoCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlarmInfoCollectionViewCell.h; sourceTree = "<group>"; };
 		223D214D201C550000F21344 /* AlarmInfoCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlarmInfoCollectionViewCell.m; sourceTree = "<group>"; };
 		223D214F201C5C8200F21344 /* HPRAlarmCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPRAlarmCell.h; sourceTree = "<group>"; };
@@ -55,8 +71,18 @@
 		223D2161201C7FE800F21344 /* TitleBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TitleBarView.m; sourceTree = "<group>"; };
 		223D2163201CA71000F21344 /* AlarmTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlarmTableViewController.h; sourceTree = "<group>"; };
 		223D2164201CA71000F21344 /* AlarmTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlarmTableViewController.m; sourceTree = "<group>"; };
-		226D7C6D201EED75002D273A /* HPRMainHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPRMainHeaderView.h; sourceTree = "<group>"; };
-		226D7C6E201EED75002D273A /* HPRMainHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPRMainHeaderView.m; sourceTree = "<group>"; };
+		2247177C202079500081B816 /* JMDropMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMDropMenu.h; sourceTree = "<group>"; };
+		2247177D202079500081B816 /* JMDropMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMDropMenu.m; sourceTree = "<group>"; };
+		22471783202080390081B816 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		2264E0C6201FF9DF00FDA7C4 /* HPRLeftMenuHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPRLeftMenuHeader.h; sourceTree = "<group>"; };
+		2264E0C7201FF9DF00FDA7C4 /* HPRLeftMenuHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPRLeftMenuHeader.m; sourceTree = "<group>"; };
+		2264E0CA202010D000FDA7C4 /* HPRLeftMenuCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPRLeftMenuCell.h; sourceTree = "<group>"; };
+		2264E0CB202010D000FDA7C4 /* HPRLeftMenuCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPRLeftMenuCell.m; sourceTree = "<group>"; };
+		2264E0CC202010D000FDA7C4 /* HPRLeftMenuCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HPRLeftMenuCell.xib; sourceTree = "<group>"; };
+		2266BD6F2021894600890A7C /* HPRLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPRLoginViewController.h; sourceTree = "<group>"; };
+		2266BD702021894600890A7C /* HPRLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPRLoginViewController.m; sourceTree = "<group>"; };
+		226D7C6D201EED75002D273A /* HPRMainHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HPRMainHeaderView.h; path = ../../View/HPRMainHeaderView.h; sourceTree = "<group>"; };
+		226D7C6E201EED75002D273A /* HPRMainHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HPRMainHeaderView.m; path = ../../View/HPRMainHeaderView.m; sourceTree = "<group>"; };
 		226D7C73201EF036002D273A /* HPRMonitorNetTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPRMonitorNetTableViewCell.h; sourceTree = "<group>"; };
 		226D7C74201EF036002D273A /* HPRMonitorNetTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPRMonitorNetTableViewCell.m; sourceTree = "<group>"; };
 		226D7C75201EF036002D273A /* HPRMonitorNetTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HPRMonitorNetTableViewCell.xib; sourceTree = "<group>"; };
@@ -64,10 +90,8 @@
 		2287F9B9201AD34600D6A257 /* HPRConstant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPRConstant.m; sourceTree = "<group>"; };
 		2287F9BB201AF07600D6A257 /* HPRMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HPRMainViewController.h; path = ../HPRMainViewController.h; sourceTree = "<group>"; };
 		2287F9BC201AF07600D6A257 /* HPRMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HPRMainViewController.m; path = ../HPRMainViewController.m; sourceTree = "<group>"; };
-		2287F9C1201B048500D6A257 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		2287F9C4201B519400D6A257 /* SlideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideViewController.h; sourceTree = "<group>"; };
 		2287F9C5201B519400D6A257 /* SlideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideViewController.m; sourceTree = "<group>"; };
-		2287F9C6201B519400D6A257 /* SlideViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SlideViewController.xib; sourceTree = "<group>"; };
 		2287F9CA201B584A00D6A257 /* PushNotificationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushNotificationManager.h; sourceTree = "<group>"; };
 		2287F9CB201B584A00D6A257 /* PushNotificationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushNotificationManager.m; sourceTree = "<group>"; };
 		22ED7A31201730BB00AFB4C5 /* HouseAlarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HouseAlarm.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -109,6 +133,35 @@
 				9D6751C31922CEEDD8389F6E /* Pods-HouseAlarm.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		220966AA20219DC300457FD7 /* setNewNetInfo */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = setNewNetInfo;
+			sourceTree = "<group>";
+		};
+		220966D62021B74900457FD7 /* guideView */ = {
+			isa = PBXGroup;
+			children = (
+				220966DD2021B99A00457FD7 /* imags */,
+				220966D72021B75F00457FD7 /* HcdGuideView.h */,
+				220966D82021B75F00457FD7 /* HcdGuideView.m */,
+				220966D92021B75F00457FD7 /* HcdGuideViewCell.h */,
+				220966DA2021B75F00457FD7 /* HcdGuideViewCell.m */,
+			);
+			path = guideView;
+			sourceTree = "<group>";
+		};
+		220966DD2021B99A00457FD7 /* imags */ = {
+			isa = PBXGroup;
+			children = (
+				220966EA2021C6F900457FD7 /* g3.jpg */,
+				220966E82021C6E900457FD7 /* g1.jpg */,
+				220966E02021BAE600457FD7 /* g2.jpg */,
+			);
+			path = imags;
 			sourceTree = "<group>";
 		};
 		223D2144201C4CDD00F21344 /* AlarmInfomation */ = {
@@ -179,11 +232,51 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		2247177B202079230081B816 /* popMenuBar */ = {
+			isa = PBXGroup;
+			children = (
+				2247177C202079500081B816 /* JMDropMenu.h */,
+				2247177D202079500081B816 /* JMDropMenu.m */,
+			);
+			path = popMenuBar;
+			sourceTree = "<group>";
+		};
+		2247177F20207FAA0081B816 /* login&register */ = {
+			isa = PBXGroup;
+			children = (
+				22471783202080390081B816 /* Login.storyboard */,
+				2266BD6F2021894600890A7C /* HPRLoginViewController.h */,
+				2266BD702021894600890A7C /* HPRLoginViewController.m */,
+			);
+			path = "login&register";
+			sourceTree = "<group>";
+		};
+		2264E0C5201FF9AB00FDA7C4 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				2264E0C92020107700FDA7C4 /* detail */,
+				226D7C6D201EED75002D273A /* HPRMainHeaderView.h */,
+				226D7C6E201EED75002D273A /* HPRMainHeaderView.m */,
+				2264E0C6201FF9DF00FDA7C4 /* HPRLeftMenuHeader.h */,
+				2264E0C7201FF9DF00FDA7C4 /* HPRLeftMenuHeader.m */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		2264E0C92020107700FDA7C4 /* detail */ = {
+			isa = PBXGroup;
+			children = (
+				2264E0CA202010D000FDA7C4 /* HPRLeftMenuCell.h */,
+				2264E0CB202010D000FDA7C4 /* HPRLeftMenuCell.m */,
+				2264E0CC202010D000FDA7C4 /* HPRLeftMenuCell.xib */,
+			);
+			name = detail;
+			sourceTree = "<group>";
+		};
 		226D7C6C201EED48002D273A /* View */ = {
 			isa = PBXGroup;
 			children = (
-				226D7C6D201EED75002D273A /* HPRMainHeaderView.h */,
-				226D7C6E201EED75002D273A /* HPRMainHeaderView.m */,
+				2247177F20207FAA0081B816 /* login&register */,
 				226D7C73201EF036002D273A /* HPRMonitorNetTableViewCell.h */,
 				226D7C74201EF036002D273A /* HPRMonitorNetTableViewCell.m */,
 				226D7C75201EF036002D273A /* HPRMonitorNetTableViewCell.xib */,
@@ -194,12 +287,15 @@
 		2287F9C3201B094600D6A257 /* MainMVC */ = {
 			isa = PBXGroup;
 			children = (
+				220966D62021B74900457FD7 /* guideView */,
+				220966AA20219DC300457FD7 /* setNewNetInfo */,
+				2247177B202079230081B816 /* popMenuBar */,
+				2264E0C5201FF9AB00FDA7C4 /* view */,
 				22ED7A3D201730BB00AFB4C5 /* Main.storyboard */,
 				2287F9BB201AF07600D6A257 /* HPRMainViewController.h */,
 				2287F9BC201AF07600D6A257 /* HPRMainViewController.m */,
 				2287F9C4201B519400D6A257 /* SlideViewController.h */,
 				2287F9C5201B519400D6A257 /* SlideViewController.m */,
-				2287F9C6201B519400D6A257 /* SlideViewController.xib */,
 			);
 			path = MainMVC;
 			sourceTree = "<group>";
@@ -216,10 +312,10 @@
 		22ED7A28201730BB00AFB4C5 = {
 			isa = PBXGroup;
 			children = (
-				22ED7A33201730BB00AFB4C5 /* HouseAlarm */,
-				22ED7A32201730BB00AFB4C5 /* Products */,
-				1C0521B348493FAEF8CC1FFD /* Pods */,
 				774035E877600F049127C240 /* Frameworks */,
+				22ED7A33201730BB00AFB4C5 /* HouseAlarm */,
+				1C0521B348493FAEF8CC1FFD /* Pods */,
+				22ED7A32201730BB00AFB4C5 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -234,21 +330,20 @@
 		22ED7A33201730BB00AFB4C5 /* HouseAlarm */ = {
 			isa = PBXGroup;
 			children = (
-				226D7C6C201EED48002D273A /* View */,
-				223D2152201C61D900F21344 /* Categories */,
 				223D2144201C4CDD00F21344 /* AlarmInfomation */,
-				2287F9C9201B584A00D6A257 /* PushNotificationManager */,
-				2287F9C3201B094600D6A257 /* MainMVC */,
-				22F941462019D1D300EA955E /* Utils */,
-				22ED7A5620173AED00AFB4C5 /* Module */,
 				22ED7A5220173A5E00AFB4C5 /* Application */,
-				22ED7A4F2017332B00AFB4C5 /* Config */,
 				22ED7A43201730BB00AFB4C5 /* Assets.xcassets */,
-				22ED7A45201730BB00AFB4C5 /* LaunchScreen.storyboard */,
-				22ED7A48201730BB00AFB4C5 /* Info.plist */,
+				223D2152201C61D900F21344 /* Categories */,
+				22ED7A4F2017332B00AFB4C5 /* Config */,
 				22ED7A40201730BB00AFB4C5 /* HouseAlarm.xcdatamodeld */,
+				22ED7A48201730BB00AFB4C5 /* Info.plist */,
+				22ED7A45201730BB00AFB4C5 /* LaunchScreen.storyboard */,
+				2287F9C3201B094600D6A257 /* MainMVC */,
+				22ED7A5620173AED00AFB4C5 /* Module */,
+				2287F9C9201B584A00D6A257 /* PushNotificationManager */,
 				22ED7A34201730BB00AFB4C5 /* Supporting Files */,
-				2287F9C1201B048500D6A257 /* Login.storyboard */,
+				22F941462019D1D300EA955E /* Utils */,
+				226D7C6C201EED48002D273A /* View */,
 			);
 			path = HouseAlarm;
 			sourceTree = "<group>";
@@ -364,6 +459,7 @@
 		22ED7A29201730BB00AFB4C5 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = HPR;
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = jbu;
 				TargetAttributes = {
@@ -398,10 +494,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				22ED7A47201730BB00AFB4C5 /* LaunchScreen.storyboard in Resources */,
+				220966EB2021C6F900457FD7 /* g3.jpg in Resources */,
 				226D7C77201EF037002D273A /* HPRMonitorNetTableViewCell.xib in Resources */,
+				22471784202080390081B816 /* Login.storyboard in Resources */,
+				2264E0CE202010D000FDA7C4 /* HPRLeftMenuCell.xib in Resources */,
 				22ED7A44201730BB00AFB4C5 /* Assets.xcassets in Resources */,
-				2287F9C2201B048500D6A257 /* Login.storyboard in Resources */,
-				2287F9C8201B519400D6A257 /* SlideViewController.xib in Resources */,
+				220966E92021C6E900457FD7 /* g1.jpg in Resources */,
+				220966E12021BAE600457FD7 /* g2.jpg in Resources */,
 				22ED7A3F201730BB00AFB4C5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -487,6 +586,7 @@
 				223D214E201C550000F21344 /* AlarmInfoCollectionViewCell.m in Sources */,
 				223D2158201C644400F21344 /* HPRUtils.m in Sources */,
 				2287F9CC201B584A00D6A257 /* PushNotificationManager.m in Sources */,
+				220966DC2021B75F00457FD7 /* HcdGuideViewCell.m in Sources */,
 				2287F9BD201AF07600D6A257 /* HPRMainViewController.m in Sources */,
 				223D2151201C5C8200F21344 /* HPRAlarmCell.m in Sources */,
 				223D2165201CA71000F21344 /* AlarmTableViewController.m in Sources */,
@@ -494,6 +594,7 @@
 				22ED7A42201730BB00AFB4C5 /* HouseAlarm.xcdatamodeld in Sources */,
 				223D215F201C7E5200F21344 /* HPRAlarmListsViewController.m in Sources */,
 				22ED7A5A20173C7800AFB4C5 /* SocketClient.m in Sources */,
+				2264E0C8201FF9DF00FDA7C4 /* HPRLeftMenuHeader.m in Sources */,
 				223D2162201C7FE800F21344 /* TitleBarView.m in Sources */,
 				226D7C76201EF037002D273A /* HPRMonitorNetTableViewCell.m in Sources */,
 				223D2155201C620B00F21344 /* UIColor+Utils.m in Sources */,
@@ -501,9 +602,13 @@
 				22ED7A36201730BB00AFB4C5 /* main.m in Sources */,
 				22ED7A5E20173F5800AFB4C5 /* DIYOutBuffer.m in Sources */,
 				223D215C201C678200F21344 /* HPRListItemBean.m in Sources */,
+				2264E0CD202010D000FDA7C4 /* HPRLeftMenuCell.m in Sources */,
 				22F9414A2019D23200EA955E /* HPRNotification.m in Sources */,
+				2247177E202079500081B816 /* JMDropMenu.m in Sources */,
+				2266BD712021894600890A7C /* HPRLoginViewController.m in Sources */,
 				2287F9C7201B519400D6A257 /* SlideViewController.m in Sources */,
 				226D7C6F201EED75002D273A /* HPRMainHeaderView.m in Sources */,
+				220966DB2021B75F00457FD7 /* HcdGuideView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -571,7 +676,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -613,7 +718,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -628,7 +733,7 @@
 				DEVELOPMENT_TEAM = 5TTPT7ZUUT;
 				GCC_PREFIX_HEADER = "HouseAlarm/HouseAlarm-Prefix.pch";
 				INFOPLIST_FILE = HouseAlarm/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jbu.HouseAlarm;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -643,7 +748,7 @@
 				DEVELOPMENT_TEAM = 5TTPT7ZUUT;
 				GCC_PREFIX_HEADER = "HouseAlarm/HouseAlarm-Prefix.pch";
 				INFOPLIST_FILE = HouseAlarm/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jbu.HouseAlarm;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -35,9 +35,10 @@
     _bgImage.clipsToBounds = YES;
     
     [self addSubview:_bgImage];
+    
     _leftImage=[[UIImageView alloc] init];
     _leftImage.backgroundColor = [UIColor redColor];
-    _leftImage.contentMode = UIViewContentModeScaleAspectFill;////图片拉伸变形
+    _leftImage.contentMode = UIViewContentModeScaleToFill;////图片拉伸变形
     [self addSubview:_leftImage];
     
     

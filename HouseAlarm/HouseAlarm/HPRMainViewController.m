@@ -17,12 +17,21 @@
 #import "UIColor+Utils.h"
 #import "HPRMonitorNetTableViewCell.h"
 
+#import "JMDropMenu.h"
+#import "HPRLoginViewController.h"
+
 #define HPR_SCREEN_WIDTH  [UIScreen mainScreen].bounds.size.width
 #define HPR_HEADER_HEIGHT [UIScreen mainScreen].bounds.size.width * 39 / 125
 
 static NSString * const monitorNetReuseIdentifier = @"monitorNetTableViewCell";
 
-@interface HPRMainViewController ()<UNUserNotificationCenterDelegate>
+@interface HPRMainViewController ()<UNUserNotificationCenterDelegate,JMDropMenuDelegate>
+
+/** titleArr */
+@property (nonatomic, strong) NSArray *titleArr;
+/** imgArr */
+@property (nonatomic, strong) NSArray *imageArr;
+
 
 @property (nonatomic,strong) HPRMainHeaderView * headerView;
 
@@ -51,21 +60,45 @@ static NSString * const monitorNetReuseIdentifier = @"monitorNetTableViewCell";
                                                                         body: nitification identifier:@"1-1" timeInterval:1 repeat:NO];   //`repeat` if you pick the repeat property 'YES',you require to set the timeInterval value >= 60second ->是否重复,若要重复->时间间隔应>=60s
 }
 
+- (void)didSelectRowAtIndex:(NSInteger)index Title:(NSString *)title Image:(NSString *)image {
+    NSLog(@"index----%zd,  title---%@, image---%@", index, title, image);
+}
+
+
+#pragma mark - 右边
+- (IBAction)navRightClick:(id)sender {
+    
+    JMDropMenu *menu =[JMDropMenu showDropMenuFrame:CGRectMake(self.view.frame.size.width - 128, 64, 120, 52*_titleArr.count) ArrowOffset:102.f TitleArr:self.titleArr ImageArr:self.imageArr Type:JMDropMenuTypeQQ LayoutType:JMDropMenuLayoutTypeNormal RowHeight:40.f Delegate:self];
+    
+   
+}
+
 - (void) cbRecvMsg:(NSNotification*) notification{
     LogHA(@"Main UI  cbRecvMsg");
      NSString* body = (NSString*)notification.object;
      [self insideNotification:body];
 }
 
-
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+     LogHA(@"viewDidAppear");
+}
+ - (void)viewWillAppear:(BOOL)animated
+{
+     LogHA(@"viewWillAppear");
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self layoutUI];
+     LogHA(@"viewDidLoad");
     // Do any additional setup after loading the view.
     [self regNotificationCenter];
-    self.slideLeftVC = [[SlideViewController alloc] initWithNibName:@"SlideViewController" bundle:nil];
+       //self.slideLeftVC = [[SlideViewController alloc] initWithNibName:@"SlideViewController" bundle:nil];
     [[UNUserNotificationCenter currentNotificationCenter] setDelegate:self];
     
+    self.titleArr = @[@"添加设备"];
+    self.imageArr = @[@"img3"];
+
 
     
     [self setTitle:@"监控"];
@@ -87,14 +120,16 @@ static NSString * const monitorNetReuseIdentifier = @"monitorNetTableViewCell";
 
 -(IBAction)onClickLeftSlide:(id)sender{
     
-    [self cw_showDefaultDrawerViewController: self.slideLeftVC];
+    SlideViewController *slideLeftVC = [[SlideViewController alloc] init];
+
+    [self cw_showDefaultDrawerViewController: slideLeftVC];
 
     //[self presentViewController:vc animated:YES completion:nil];
 }
 
 -(IBAction)onClickRightFunc:(id)sender{
     
-     [[PushNotificationManager sharedInstance]normalPushNotificationWithTitle:@"John Winston Lennon" subTitle:@"《Imagine》" body:@"You may say that I'm a dreamer, but I'm not the only one" identifier:@"1-1" timeInterval:3 repeat:NO];   //`repeat` if you pick the repeat property 'YES',you require to set the timeInterval value >= 60second ->是否重复,若要重复->时间间隔应>=60s
+     [[PushNotificationManager sharedInstance] normalPushNotificationWithTitle:@"John Winston Lennon" subTitle:@"《Imagine》" body:@"You may say that I'm a dreamer, but I'm not the only one" identifier:@"1-1" timeInterval:3 repeat:NO];   //`repeat` if you pick the repeat property 'YES',you require to set the timeInterval value >= 60second ->是否重复,若要重复->时间间隔应>=60s
     
 }
 
@@ -124,8 +159,13 @@ static NSString * const monitorNetReuseIdentifier = @"monitorNetTableViewCell";
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    HPRAlarmListsViewController *vc = [[HPRAlarmListsViewController alloc] init];
-    [self.navigationController pushViewController:vc animated:YES];
+    //HPRAlarmListsViewController *vc = [[HPRAlarmListsViewController alloc] init];
+   // [self.navigationController pushViewController:vc animated:YES];
+    
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Login" bundle:nil];
+    HPRLoginViewController *loginVC = [storyboard instantiateInitialViewController];
+    [self presentViewController:loginVC animated:YES completion:nil];
+
 }
 
 

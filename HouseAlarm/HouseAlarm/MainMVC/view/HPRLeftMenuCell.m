@@ -7,8 +7,18 @@
 //
 
 #import "HPRLeftMenuCell.h"
+@interface HPRLeftMenuCell()
+@property (weak, nonatomic) IBOutlet UIImageView *imgCell;
+@property (weak,nonatomic) IBOutlet UILabel *nameLabel;
+
+@end
 
 @implementation HPRLeftMenuCell
+
++ (instancetype)createCellFromTableView:(UITableView *)tv indexPath:(NSIndexPath *)indexPath identifier:(NSString *)identifier{
+    HPRLeftMenuCell * cell =[tv dequeueReusableCellWithIdentifier:identifier forIndexPath:indexPath];
+    return cell;
+}
 
 - (void)awakeFromNib {
     [super awakeFromNib];

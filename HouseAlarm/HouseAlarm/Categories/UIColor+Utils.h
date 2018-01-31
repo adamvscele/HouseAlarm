@@ -12,6 +12,8 @@
 + (UIColor *)colorWithCGColor:(CGColorRef)cgColor alpha:(CGFloat)alpha;
 + (UIColor *)colorWithHex:(int)hex;
 
+
++ (UIColor *)navigationbarColor;
 + (UIColor *)selectCellColor;
 
 + (UIColor *)titleColor;

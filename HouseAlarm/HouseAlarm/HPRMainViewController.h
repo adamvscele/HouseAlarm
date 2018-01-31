@@ -10,7 +10,7 @@
 @class SlideViewController;
 @interface HPRMainViewController : UITableViewController
 
-@property (nonatomic,strong)SlideViewController *slideLeftVC;
+//@property (nonatomic,strong)SlideViewController *slideLeftVC;
 
 
 

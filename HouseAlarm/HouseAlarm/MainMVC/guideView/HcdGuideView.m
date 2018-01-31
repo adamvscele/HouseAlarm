@@ -8,7 +8,7 @@
 
 #import "HcdGuideView.h"
 #import "HcdGuideViewCell.h"
-
+#import "UIColor+Utils.h"
 @interface HcdGuideView()<UICollectionViewDelegate, UICollectionViewDataSource, UIScrollViewDelegate>
 
 @property (nonatomic, strong) UICollectionView *view;
@@ -31,6 +31,7 @@
     });
     return instance;
 }
+
 
 /**
  *  引导页界面
@@ -73,6 +74,40 @@
         _pageControl.center = CGPointMake(kHcdGuideViewBounds.size.width / 2, kHcdGuideViewBounds.size.height - 60);
     }
     return _pageControl;
+}
+- (void)showGuideViews:(UIWindow *)wnd{
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    NSString *version = [[NSBundle mainBundle].infoDictionary objectForKey:@"CFBundleShortVersionString"];
+    
+    //根据版本号来判断是否需要显示引导页，一般来说每更新一个版本引导页都会有相应的修改
+    BOOL show = [userDefaults boolForKey:[NSString stringWithFormat:@"version_%@", version]];
+    if (!show) {
+        NSMutableArray *imgs = [NSMutableArray new];
+        [imgs addObject:[UIImage imageNamed:@"g1.jpg"]];
+         [imgs addObject:[UIImage imageNamed:@"g2.jpg"]];
+         [imgs addObject:[UIImage imageNamed:@"g3.jpg"]];
+        self.images = imgs;
+        self.buttonBorderColor = [UIColor whiteColor];
+        self.buttonBgColor = [UIColor clearColor];
+        self.buttonTitle = @"立即体验";
+        self.titleColor = [UIColor whiteColor];
+        self.pageControl.numberOfPages = imgs.count;
+        self.window = wnd;
+        if (nil == self.window) {
+            self.window = [UIApplication sharedApplication].keyWindow;
+        }
+        
+        
+        [self.window addSubview:self.view];
+       // [self.window addSubview:self.pageControl];
+        
+        //[userDefaults setBool:YES forKey:[NSString stringWithFormat:@"version_%@", version]];
+        [userDefaults synchronize];
+        
+        
+    }
+    
+   
 }
 
 - (void)showGuideViewWithImages:(NSArray *)images

@@ -10,4 +10,7 @@
 
 @interface HPRLeftMenuCell : UITableViewCell
 
++ (instancetype)createCellFromTableView:(UITableView *) tv
+                              indexPath:(NSIndexPath *)indexPath
+                             identifier:(NSString *)identifier;
 @end

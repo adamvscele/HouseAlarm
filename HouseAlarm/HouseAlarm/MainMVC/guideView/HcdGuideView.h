@@ -20,6 +20,7 @@
  */
 + (instancetype)sharedInstance;
 
+- (void) showGuideViews:(UIWindow *)wnd;
 /**
  *  引导页图片
  *

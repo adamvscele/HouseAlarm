@@ -135,9 +135,6 @@
                             <constraint firstItem="MMj-rd-PEg" firstAttribute="top" secondItem="RCI-bv-wEC" secondAttribute="bottom" constant="15" id="wS6-D5-FFz"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="view" destination="Y8P-6w-41o" id="sni-BS-DCz"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RnS-Cs-tLv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
