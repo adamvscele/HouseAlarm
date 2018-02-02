@@ -40,12 +40,15 @@
     [self addSubview:_bgImage];
     
     _portraitImage = [[UIImageView alloc] init];
-    _portraitImage.backgroundColor = [UIColor redColor];
+    //_portraitImage.backgroundColor = [UIColor redColor];
     _portraitImage.contentMode = UIViewContentModeScaleToFill;
+    
+    _portraitImage.image = [UIImage imageNamed:@"portraitFemale"];
     [self addSubview:_portraitImage];
     
     _goDetail = [[UIImageView alloc] init];
-    _goDetail.backgroundColor = [UIColor redColor];
+    //_goDetail.backgroundColor = [UIColor redColor];
+     _goDetail.image = [UIImage imageNamed:@"arrowRight"];
     _goDetail.contentMode = UIViewContentModeScaleToFill;
     [self addSubview:_goDetail];
     
@@ -77,9 +80,8 @@
     
     [_portraitImage mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self).offset(18);
-        make.top.equalTo(self).offset(10);
-        make.bottom.equalTo(self).offset(-10);
-        make.width.equalTo(@120);
+        make.centerY.equalTo(self.mas_centerY);
+        make.width.and.height.equalTo(@58);
     }];
     
     [_userNameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -98,13 +100,15 @@
     
     
     [_goDetail mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.height.and.width.equalTo(@20);
-        make.right.equalTo(self.mas_right);
+        make.height.equalTo(@20);
+        make.width.equalTo(@10);
+        make.right.equalTo(self.mas_right).offset(-20);
         make.centerY.equalTo(self.mas_centerY);
         make.left.equalTo(_userNameLabel.mas_right);
+        
    }];
     
-    [self showPlaceHolder];
+    //[self showPlaceHolder];
 }
 
 

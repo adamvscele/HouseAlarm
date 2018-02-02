@@ -2,6 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>MOBAppSecret</key>
+	<string>57f5c3c64a3f9ce3cf8c6888e65829d0</string>
+	<key>MOBAppKey</key>
+	<string>239445f1db76a</string>
 	<key>CFBundleDisplayName</key>
 	<string>青鸟消防家庭报警</string>
 	<key>CFBundleExecutable</key>

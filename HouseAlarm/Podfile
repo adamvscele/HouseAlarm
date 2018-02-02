@@ -14,5 +14,6 @@ pod 'TSMessages'
 pod 'MJRefresh'
 pod 'YYKit'
 pod 'MMPlaceHolder'
+pod 'mob_smssdk'
 
 end

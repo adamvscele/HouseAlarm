@@ -19,9 +19,27 @@
 @interface SlideViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property HPRLeftMenuHeader *menuHeader;
 @property UITableView *tableView;
+
+@property (nonatomic,strong)NSArray *imgArray;
+@property (nonatomic,strong)NSArray *titleArray;
+
 @end
 
 @implementation SlideViewController
+
+- (NSArray *)imgArray{
+    if (_imgArray == NULL) {
+        _imgArray = @[@"myDevice",@"myDevice",@"myDevice",@"exit"];
+    }
+    return _imgArray;
+}
+
+- (NSArray *)titleArray{
+    if (_titleArray == NULL) {
+        _titleArray = @[@"我的设备",@"统计分析",@"设置",@"退出登录"];
+    }
+    return _titleArray;
+}
 
 
 - (void)viewDidLoad {
@@ -57,10 +75,13 @@
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 4;
+    return self.titleArray.count;
 }
 -(UITableViewCell*) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     HPRLeftMenuCell *cell = [HPRLeftMenuCell createCellFromTableView:tableView indexPath:indexPath identifier:leftMenucellIdentifier];
+    [cell setImg:self.imgArray[indexPath.row]];
+    [cell setName:self.titleArray[indexPath.row]];
+    
     return cell;
 }
 
@@ -73,6 +94,10 @@
         [self cw_pushViewController:vc];
 
     }
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 60;
 }
 
 - (void)showAlterView:(NSString *)title message:(NSString*) message{

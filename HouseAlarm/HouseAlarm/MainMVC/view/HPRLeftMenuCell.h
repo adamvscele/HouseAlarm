@@ -9,7 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface HPRLeftMenuCell : UITableViewCell
-
+- (void)setImg:(NSString *)img;
+- (void)setName:(NSString *)name;
 + (instancetype)createCellFromTableView:(UITableView *) tv
                               indexPath:(NSIndexPath *)indexPath
                              identifier:(NSString *)identifier;

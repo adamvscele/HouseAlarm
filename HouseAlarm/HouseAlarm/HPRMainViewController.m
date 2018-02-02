@@ -19,6 +19,7 @@
 
 #import "JMDropMenu.h"
 #import "HPRLoginViewController.h"
+#import <MJRefresh.h>
 
 #define HPR_SCREEN_WIDTH  [UIScreen mainScreen].bounds.size.width
 #define HPR_HEADER_HEIGHT [UIScreen mainScreen].bounds.size.width * 39 / 125
@@ -33,7 +34,7 @@ static NSString * const monitorNetReuseIdentifier = @"monitorNetTableViewCell";
 @property (nonatomic, strong) NSArray *imageArr;
 
 
-@property (nonatomic,strong) HPRMainHeaderView * headerView;
+@property (nonatomic,weak) HPRMainHeaderView * headerView;
 
 
 @property (nonatomic,strong) NSMutableArray* monitorNetDatas;
@@ -89,6 +90,9 @@ static NSString * const monitorNetReuseIdentifier = @"monitorNetTableViewCell";
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self.tableView registerNib:[UINib nibWithNibName:@"HPRMonitorNetTableViewCell" bundle:nil]
+        forCellReuseIdentifier:monitorNetReuseIdentifier];
     [self layoutUI];
      LogHA(@"viewDidLoad");
     // Do any additional setup after loading the view.
@@ -99,24 +103,36 @@ static NSString * const monitorNetReuseIdentifier = @"monitorNetTableViewCell";
     self.titleArr = @[@"添加设备"];
     self.imageArr = @[@"img3"];
 
-
-    
     [self setTitle:@"监控"];
     
 }
 
 - (void)layoutUI{
     self.view.backgroundColor = [UIColor colorWithHex:0xfcfcfc];
-    [self.tableView registerNib:[UINib nibWithNibName:@"HPRMonitorNetTableViewCell" bundle:nil]
-                               forCellReuseIdentifier:monitorNetReuseIdentifier];
+   
     self.tableView.estimatedRowHeight = 132;
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    HPRMainHeaderView *tbheader
+     = [[HPRMainHeaderView alloc] initWithFrame:CGRectMake(0,0, HPR_SCREEN_WIDTH, HPR_HEADER_HEIGHT)];
+    self.headerView = tbheader;
     
-    self.headerView = [[HPRMainHeaderView alloc] initWithFrame:CGRectMake(0,0, HPR_SCREEN_WIDTH, HPR_HEADER_HEIGHT)];
-    self.tableView.tableHeaderView = self.headerView;
-    
+    self.tableView.tableHeaderView = tbheader;//self.headerView;
+    MJRefreshNormalHeader *header =[MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        [self.tableView.mj_header endRefreshing];
+         }];
+     [header setTitle:@"下拉可以刷新" forState:MJRefreshStateIdle];
+    [header setTitle:@"松开即可刷新" forState:MJRefreshStatePulling];
+    [header setTitle:@"正在刷新数据中..." forState:MJRefreshStateRefreshing];
+
+   
+        self.tableView.mj_header =header;
+        
+  
+    [self.tableView.mj_header beginRefreshing];
 }
+
+
 
 -(IBAction)onClickLeftSlide:(id)sender{
     
@@ -144,12 +160,15 @@ static NSString * const monitorNetReuseIdentifier = @"monitorNetTableViewCell";
 #pragma mark - tableview delegate &datasource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 1;
+    return 4;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete implementation, return the number of rows
-    return 4;
+    return 1;
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    return 5;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{

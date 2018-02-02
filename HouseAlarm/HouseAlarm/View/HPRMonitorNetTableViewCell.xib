@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -16,26 +15,26 @@
             <rect key="frame" x="0.0" y="0.0" width="408" height="116"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="408" height="116"/>
+                <rect key="frame" x="0.0" y="0.0" width="408" height="115.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="用户位置" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lxn-o6-av2">
-                        <rect key="frame" x="24" y="16" width="360" height="20.5"/>
+                        <rect key="frame" x="24" y="16" width="360" height="21.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lKQ-Ml-jF9" userLabel="split_line">
-                        <rect key="frame" x="16" y="114.5" width="392" height="1"/>
-                        <color key="backgroundColor" red="0.4634313766" green="0.43427632269999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lKQ-Ml-jF9" userLabel="split_line">
+                        <rect key="frame" x="0.0" y="113.5" width="408" height="3"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="1" id="9nK-X7-wxy"/>
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yx8-xP-VEI" userLabel="火警">
-                        <rect key="frame" x="0.0" y="44.5" width="102" height="64"/>
+                        <rect key="frame" x="0.0" y="45.5" width="102" height="64"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="NotificationBackgroundSuccessIcon.png" translatesAutoresizingMaskIntoConstraints="NO" id="2cY-8F-oKl" userLabel="fire_ico">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fire_ico" translatesAutoresizingMaskIntoConstraints="NO" id="2cY-8F-oKl" userLabel="fire_ico">
                                 <rect key="frame" x="13" y="25" width="12" height="12"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -47,15 +46,15 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.21451014833443949" blue="0.31276332817419195" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="64" id="d6i-RC-ZZw"/>
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CYW-s8-6RK" userLabel="屏蔽">
-                        <rect key="frame" x="204" y="44.5" width="102" height="64"/>
+                        <rect key="frame" x="204" y="45.5" width="102" height="64"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="NotificationBackgroundSuccessIcon.png" translatesAutoresizingMaskIntoConstraints="NO" id="3fv-wh-sO2" userLabel="shield_ico">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="shield_ico" translatesAutoresizingMaskIntoConstraints="NO" id="3fv-wh-sO2" userLabel="shield_ico">
                                 <rect key="frame" x="14" y="27.5" width="12" height="12"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -67,12 +66,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.44368226090000001" green="1" blue="0.35933098610000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pqw-RI-wXf" userLabel="其它">
-                        <rect key="frame" x="306" y="44.5" width="102" height="64"/>
+                        <rect key="frame" x="306" y="45.5" width="102" height="64"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="NotificationBackgroundSuccessIcon.png" translatesAutoresizingMaskIntoConstraints="NO" id="cdr-fy-ZB7" userLabel="other_ico">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="other_ico" translatesAutoresizingMaskIntoConstraints="NO" id="cdr-fy-ZB7" userLabel="other_ico">
                                 <rect key="frame" x="15" y="25.5" width="12" height="12"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -84,12 +83,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.21451014830000001" blue="0.31276332820000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K9a-As-ECb" userLabel="故障">
-                        <rect key="frame" x="102" y="44.5" width="102" height="64"/>
+                        <rect key="frame" x="102" y="45.5" width="102" height="64"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="NotificationBackgroundSuccessIcon.png" translatesAutoresizingMaskIntoConstraints="NO" id="5ny-Lq-CNe" userLabel="fault_ico">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fault_ico" translatesAutoresizingMaskIntoConstraints="NO" id="5ny-Lq-CNe" userLabel="fault_ico">
                                 <rect key="frame" x="17" y="25.5" width="12" height="12"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -101,20 +100,20 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.96964684249999999" green="1" blue="0.37328102279999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </view>
                 </subviews>
                 <constraints>
                     <constraint firstItem="K9a-As-ECb" firstAttribute="leading" secondItem="yx8-xP-VEI" secondAttribute="trailing" id="4yI-su-ZQa"/>
                     <constraint firstItem="K9a-As-ECb" firstAttribute="centerY" secondItem="yx8-xP-VEI" secondAttribute="centerY" id="4zJ-TW-UKB"/>
-                    <constraint firstItem="lKQ-Ml-jF9" firstAttribute="top" secondItem="yx8-xP-VEI" secondAttribute="bottom" constant="6" id="7QO-mi-hiO"/>
+                    <constraint firstItem="lKQ-Ml-jF9" firstAttribute="top" secondItem="yx8-xP-VEI" secondAttribute="bottom" constant="4" id="7QO-mi-hiO"/>
                     <constraint firstAttribute="trailing" secondItem="lKQ-Ml-jF9" secondAttribute="trailing" id="Bw1-f0-i3A"/>
                     <constraint firstItem="K9a-As-ECb" firstAttribute="width" secondItem="yx8-xP-VEI" secondAttribute="width" id="EQd-nx-HM3"/>
                     <constraint firstItem="pqw-RI-wXf" firstAttribute="height" secondItem="yx8-xP-VEI" secondAttribute="height" id="H5x-sZ-59r"/>
-                    <constraint firstAttribute="bottom" secondItem="lKQ-Ml-jF9" secondAttribute="bottom" id="Ktb-8O-xK4"/>
+                    <constraint firstAttribute="bottom" secondItem="lKQ-Ml-jF9" secondAttribute="bottom" constant="1" id="Ktb-8O-xK4"/>
                     <constraint firstItem="CYW-s8-6RK" firstAttribute="height" secondItem="yx8-xP-VEI" secondAttribute="height" id="MSZ-dz-ehg"/>
                     <constraint firstItem="yx8-xP-VEI" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="O0i-FO-dep"/>
-                    <constraint firstItem="lKQ-Ml-jF9" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="VAT-l8-dUK"/>
+                    <constraint firstItem="lKQ-Ml-jF9" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="VAT-l8-dUK"/>
                     <constraint firstItem="pqw-RI-wXf" firstAttribute="leading" secondItem="CYW-s8-6RK" secondAttribute="trailing" id="VDN-AE-vDy"/>
                     <constraint firstItem="K9a-As-ECb" firstAttribute="leading" secondItem="yx8-xP-VEI" secondAttribute="trailing" id="Zse-fZ-2wq"/>
                     <constraint firstItem="CYW-s8-6RK" firstAttribute="centerY" secondItem="yx8-xP-VEI" secondAttribute="centerY" id="a8H-TY-Kh1"/>
@@ -134,6 +133,9 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="NotificationBackgroundSuccessIcon.png" width="20" height="17"/>
+        <image name="fault_ico" width="10" height="13"/>
+        <image name="fire_ico" width="9" height="13"/>
+        <image name="other_ico" width="10" height="10"/>
+        <image name="shield_ico" width="13" height="12"/>
     </resources>
 </document>

@@ -22,6 +22,10 @@
 		223D2165201CA71000F21344 /* AlarmTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 223D2164201CA71000F21344 /* AlarmTableViewController.m */; };
 		2247177E202079500081B816 /* JMDropMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 2247177D202079500081B816 /* JMDropMenu.m */; };
 		22471784202080390081B816 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22471783202080390081B816 /* Login.storyboard */; };
+		2258096E2022A47900961A36 /* HPRRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2258096D2022A47900961A36 /* HPRRegisterViewController.m */; };
+		225809712022E66900961A36 /* HPRRegisterStep2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 225809702022E66900961A36 /* HPRRegisterStep2ViewController.m */; };
+		225809742022E73200961A36 /* HPRResetPwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 225809732022E73200961A36 /* HPRResetPwdViewController.m */; };
+		225809772022EACF00961A36 /* HPRCompareTwicePwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 225809762022EACF00961A36 /* HPRCompareTwicePwdViewController.m */; };
 		2264E0C8201FF9DF00FDA7C4 /* HPRLeftMenuHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 2264E0C7201FF9DF00FDA7C4 /* HPRLeftMenuHeader.m */; };
 		2264E0CD202010D000FDA7C4 /* HPRLeftMenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2264E0CB202010D000FDA7C4 /* HPRLeftMenuCell.m */; };
 		2264E0CE202010D000FDA7C4 /* HPRLeftMenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2264E0CC202010D000FDA7C4 /* HPRLeftMenuCell.xib */; };
@@ -74,6 +78,14 @@
 		2247177C202079500081B816 /* JMDropMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMDropMenu.h; sourceTree = "<group>"; };
 		2247177D202079500081B816 /* JMDropMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMDropMenu.m; sourceTree = "<group>"; };
 		22471783202080390081B816 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		2258096C2022A47900961A36 /* HPRRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPRRegisterViewController.h; sourceTree = "<group>"; };
+		2258096D2022A47900961A36 /* HPRRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPRRegisterViewController.m; sourceTree = "<group>"; };
+		2258096F2022E66900961A36 /* HPRRegisterStep2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPRRegisterStep2ViewController.h; sourceTree = "<group>"; };
+		225809702022E66900961A36 /* HPRRegisterStep2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPRRegisterStep2ViewController.m; sourceTree = "<group>"; };
+		225809722022E73200961A36 /* HPRResetPwdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPRResetPwdViewController.h; sourceTree = "<group>"; };
+		225809732022E73200961A36 /* HPRResetPwdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPRResetPwdViewController.m; sourceTree = "<group>"; };
+		225809752022EACF00961A36 /* HPRCompareTwicePwdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPRCompareTwicePwdViewController.h; sourceTree = "<group>"; };
+		225809762022EACF00961A36 /* HPRCompareTwicePwdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPRCompareTwicePwdViewController.m; sourceTree = "<group>"; };
 		2264E0C6201FF9DF00FDA7C4 /* HPRLeftMenuHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPRLeftMenuHeader.h; sourceTree = "<group>"; };
 		2264E0C7201FF9DF00FDA7C4 /* HPRLeftMenuHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPRLeftMenuHeader.m; sourceTree = "<group>"; };
 		2264E0CA202010D000FDA7C4 /* HPRLeftMenuCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPRLeftMenuCell.h; sourceTree = "<group>"; };
@@ -247,8 +259,17 @@
 				22471783202080390081B816 /* Login.storyboard */,
 				2266BD6F2021894600890A7C /* HPRLoginViewController.h */,
 				2266BD702021894600890A7C /* HPRLoginViewController.m */,
+				2258096C2022A47900961A36 /* HPRRegisterViewController.h */,
+				2258096D2022A47900961A36 /* HPRRegisterViewController.m */,
+				2258096F2022E66900961A36 /* HPRRegisterStep2ViewController.h */,
+				225809702022E66900961A36 /* HPRRegisterStep2ViewController.m */,
+				225809722022E73200961A36 /* HPRResetPwdViewController.h */,
+				225809732022E73200961A36 /* HPRResetPwdViewController.m */,
+				225809752022EACF00961A36 /* HPRCompareTwicePwdViewController.h */,
+				225809762022EACF00961A36 /* HPRCompareTwicePwdViewController.m */,
 			);
-			path = "login&register";
+			name = "login&register";
+			path = "../View/login&register";
 			sourceTree = "<group>";
 		};
 		2264E0C5201FF9AB00FDA7C4 /* view */ = {
@@ -276,7 +297,6 @@
 		226D7C6C201EED48002D273A /* View */ = {
 			isa = PBXGroup;
 			children = (
-				2247177F20207FAA0081B816 /* login&register */,
 				226D7C73201EF036002D273A /* HPRMonitorNetTableViewCell.h */,
 				226D7C74201EF036002D273A /* HPRMonitorNetTableViewCell.m */,
 				226D7C75201EF036002D273A /* HPRMonitorNetTableViewCell.xib */,
@@ -287,6 +307,7 @@
 		2287F9C3201B094600D6A257 /* MainMVC */ = {
 			isa = PBXGroup;
 			children = (
+				2247177F20207FAA0081B816 /* login&register */,
 				220966D62021B74900457FD7 /* guideView */,
 				220966AA20219DC300457FD7 /* setNewNetInfo */,
 				2247177B202079230081B816 /* popMenuBar */,
@@ -587,8 +608,10 @@
 				223D2158201C644400F21344 /* HPRUtils.m in Sources */,
 				2287F9CC201B584A00D6A257 /* PushNotificationManager.m in Sources */,
 				220966DC2021B75F00457FD7 /* HcdGuideViewCell.m in Sources */,
+				225809772022EACF00961A36 /* HPRCompareTwicePwdViewController.m in Sources */,
 				2287F9BD201AF07600D6A257 /* HPRMainViewController.m in Sources */,
 				223D2151201C5C8200F21344 /* HPRAlarmCell.m in Sources */,
+				225809742022E73200961A36 /* HPRResetPwdViewController.m in Sources */,
 				223D2165201CA71000F21344 /* AlarmTableViewController.m in Sources */,
 				22ED7A5520173A5E00AFB4C5 /* AppDelegate.m in Sources */,
 				22ED7A42201730BB00AFB4C5 /* HouseAlarm.xcdatamodeld in Sources */,
@@ -601,9 +624,11 @@
 				2287F9BA201AD34600D6A257 /* HPRConstant.m in Sources */,
 				22ED7A36201730BB00AFB4C5 /* main.m in Sources */,
 				22ED7A5E20173F5800AFB4C5 /* DIYOutBuffer.m in Sources */,
+				225809712022E66900961A36 /* HPRRegisterStep2ViewController.m in Sources */,
 				223D215C201C678200F21344 /* HPRListItemBean.m in Sources */,
 				2264E0CD202010D000FDA7C4 /* HPRLeftMenuCell.m in Sources */,
 				22F9414A2019D23200EA955E /* HPRNotification.m in Sources */,
+				2258096E2022A47900961A36 /* HPRRegisterViewController.m in Sources */,
 				2247177E202079500081B816 /* JMDropMenu.m in Sources */,
 				2266BD712021894600890A7C /* HPRLoginViewController.m in Sources */,
 				2287F9C7201B519400D6A257 /* SlideViewController.m in Sources */,

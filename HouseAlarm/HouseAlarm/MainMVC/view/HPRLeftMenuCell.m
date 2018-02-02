@@ -31,4 +31,11 @@
     // Configure the view for the selected state
 }
 
+- (void)setImg:(NSString *)img{
+    _imgCell.image = [UIImage imageNamed:img];
+}
+- (void)setName:(NSString *)name{
+    _nameLabel.text = name;
+}
+
 @end

@@ -32,12 +32,14 @@
     _bgImage = [[UIImageView alloc] initWithFrame:frame];
     _bgImage.contentMode = UIViewContentModeScaleAspectFill;
     _bgImage.backgroundColor = [UIColor lightGrayColor];
+    
     _bgImage.clipsToBounds = YES;
     
     [self addSubview:_bgImage];
     
     _leftImage=[[UIImageView alloc] init];
-    _leftImage.backgroundColor = [UIColor redColor];
+    _leftImage.image = [UIImage imageNamed:@"new_fire_ico"];
+    //_leftImage.backgroundColor = [UIColor redColor];
     _leftImage.contentMode = UIViewContentModeScaleToFill;////图片拉伸变形
     [self addSubview:_leftImage];
     
@@ -76,9 +78,10 @@
     
     [_leftImage mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self).offset(18);
-        make.top.equalTo(self).offset(10);
-        make.bottom.equalTo(self).offset(-10);
-        make.width.equalTo(@120);
+        make.centerY.equalTo(self.mas_centerY);
+       // make.top.equalTo(self).offset(10);
+        //make.bottom.equalTo(self).offset(-10);
+       // make.width.equalTo(@120);
     }];
     
     [_descLable mas_makeConstraints:^(MASConstraintMaker *make) {
